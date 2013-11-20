@@ -18,3 +18,23 @@ D:\My place\Programming\XAML\Test\Test\obj\Debug\buy.g.cs
 D:\My place\Programming\XAML\Test\Test\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\My place\Programming\XAML\Test\Test\obj\Debug\Test_MarkupCompile.lref
 D:\My place\Programming\XAML\Test\Test\bin\Debug\img.jpg
+D:\SVNProjects\TeamBoweniteTeamworkProject\Test\bin\Debug\Test.exe.config
+D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\Test.exe
+D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\Test.pdb
+D:\SVNProjects\TeamBoweniteTeamworkProject\Test\bin\Debug\img.jpg
+D:\SVNProjects\TeamBoweniteTeamworkProject\Test\bin\Debug\Test.exe
+D:\SVNProjects\TeamBoweniteTeamworkProject\Test\bin\Debug\Test.pdb
+D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\Buy.baml
+D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\Sell.baml
+D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\Buy.g.cs
+D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\MainWindow.g.cs
+D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\Sell.g.cs
+D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\App.g.cs
+D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\Test_MarkupCompile.cache
+D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\Test_MarkupCompile.lref
+D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\MainWindow.baml
+D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\Test.g.resources
+D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\Test.Properties.Resources.resources
+D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\Test.csproj.GenerateResource.Cache
