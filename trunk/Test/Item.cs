@@ -5,13 +5,13 @@
 
     public abstract class Item : ISellable
     {
-        protected Item(string category, decimal salesPrice, decimal discount = 0, decimal value, int code)
+        protected Item(string category, decimal salesPrice, decimal value, int code, decimal discount = 0)
         {
             this.Category = category;
             this.SalesPrice = salesPrice;
-            this.Discount = discount;
             this.Value = value;
             this.Code = code;
+            this.Discount = discount;
         }
 
         public virtual string Category { get; protected set; }

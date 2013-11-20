@@ -3,7 +3,7 @@
     public abstract class Service : Item
     {
         public Service(string category, decimal salesPrice, decimal discount, decimal value, int code) 
-            : base(category, salesPrice, discount, value, code)
+            : base(category, salesPrice, value, code, discount)
         {
         }
 
