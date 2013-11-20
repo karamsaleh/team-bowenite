@@ -54,9 +54,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BusinessPartner.cs" />
     <Compile Include="Buy.xaml.cs">
       <DependentUpon>Buy.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Client.cs" />
+    <Compile Include="FinancialOperations.cs" />
+    <Compile Include="Goods.cs" />
+    <Compile Include="InvoiceOperations.cs" />
+    <Compile Include="Operations.cs" />
+    <Compile Include="Provider.cs" />
     <Compile Include="Sell.xaml.cs">
       <DependentUpon>Sell.xaml</DependentUpon>
     </Compile>
