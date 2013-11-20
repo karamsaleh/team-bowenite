@@ -4,24 +4,25 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:sell="clr-namespace:Test;assembly=Test"
-             mc:Ignorable="d" d:DesignWidth="469.513" d:DesignHeight="391" 
+             mc:Ignorable="d" d:DesignWidth="636.513" Height="800" 
              >
 
-    <Grid>
+    <Grid Height="630" VerticalAlignment="Bottom">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-
         <StackPanel Name="DownStackPanel"
                     Grid.Row="1"
-                    Orientation="Horizontal" Margin="0,0,238,0">
-            
-            <StackPanel Orientation="Horizontal"
-                        VerticalAlignment="Stretch"
-                        HorizontalAlignment="Stretch" Width="469.087" Margin="0,0,0,10">
+                    VerticalAlignment="Bottom"    
+                    Orientation="Horizontal" Margin="10,0,0,0">
 
-                <StackPanel VerticalAlignment="Bottom">
+            <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left" Width="576">
+
+                <StackPanel 
+                                VerticalAlignment="Bottom">
                     <TextBlock Text="Invoice No."/>
                     <TextBox Text="0000000000" />
                     <Button Content="Show All Invoices" Margin="0,5,0,15"/>
@@ -61,38 +62,45 @@
                     </UniformGrid>
 
                 </StackPanel>
-                <StackPanel x:Name="ButtonsPanel" Margin="0,0,0,10" HorizontalAlignment="Right" Background="White">
+            </StackPanel>
+            <StackPanel x:Name="ButtonsPanel" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5" Width="{Binding ActualWidth, ElementName=listView}">
+            	<StackPanel.RenderTransform>
+            		<TransformGroup>
+            			<ScaleTransform/>
+            			<SkewTransform AngleY="-0.924"/>
+            			<RotateTransform/>
+            			<TranslateTransform Y="-0.484"/>
+            		</TransformGroup>
+            	</StackPanel.RenderTransform>
 
-                	<Button Content="Article" 
-                		Width="60"
-                		Height="20"
-                		Margin="0"/>
-                	<Button Content="Change" 
-                		Width="60"
-                		Height="20"
-                		Margin="0, 20"/>
-                	<Button Content="Delete" 
-                		Width="60"
-                		Height="20"
+            	<Button Content="Article" 
+            		Width="60"
+            		Height="20"
+            		Margin="0"/>
+            	<Button Content="Change" 
+            		Width="60"
+            		Height="20"
+            		Margin="0, 20"/>
+            	<Button Content="Delete" 
+            		Width="60"
+            		Height="20"
                     />
-                	<Button Content="Save" 
-                		Width="60"
-                		Height="20"
-                		Margin="0, 20"/>
-                	<Button Content="Exit" 
-                		Width="60"
-                		Height="20"
-                		Margin="0, 20"/>
-                </StackPanel>
+            	<Button Content="Save" 
+            		Width="60"
+            		Height="20"
+            		Margin="0, 20"/>
+            	<Button Content="Exit" 
+            		Width="60"
+            		Height="20"
+            		Margin="0,20,0,0"/>
             </StackPanel>
 
         </StackPanel>
-        
         <StackPanel 
-            Grid.Row="0">
-            <ListView 
+            Grid.Row="0" Margin="10,0">
+            <ListView x:Name="listView" 
         		ScrollViewer.VerticalScrollBarVisibility="Visible"
-                ScrollViewer.HorizontalScrollBarVisibility="Visible" VerticalAlignment="Top"
+        		ScrollViewer.HorizontalScrollBarVisibility="Visible" VerticalAlignment="Top"
                 >
 
                 <ListView.View>
