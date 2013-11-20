@@ -62,11 +62,14 @@
     <Compile Include="FinancialOperations.cs" />
     <Compile Include="Goods.cs" />
     <Compile Include="InvoiceOperations.cs" />
+    <Compile Include="ISellable.cs" />
+    <Compile Include="Item.cs" />
     <Compile Include="Operations.cs" />
     <Compile Include="Provider.cs" />
     <Compile Include="Sell.xaml.cs">
       <DependentUpon>Sell.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Service.cs" />
     <Page Include="Buy.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
