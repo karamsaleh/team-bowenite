@@ -3,7 +3,7 @@
     public abstract class Goods : Item
     {
         protected Goods(string measurement, string category, decimal quantity, decimal salesPrice, decimal discount, decimal value, int code)
-            : base(category, salesPrice, discount, value, code)
+            : base(category, salesPrice, value, code, discount)
         {
             this.Measurement = measurement;
             this.Quantity = quantity;
