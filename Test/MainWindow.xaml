@@ -1,0 +1,45 @@
+﻿<Window x:Class="Test.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:my="clr-namespace:Test"
+        Title="MainWindow"
+        WindowState="Maximized">
+    
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Header="_Operations">
+                <MenuItem Header="_Sell" InputGestureText="Alt + S"/>
+                <MenuItem Header="_Buy" InputGestureText="Alt + B"/>
+                <MenuItem Header="_Exit" InputGestureText="Alt + E"/>
+            </MenuItem>
+            <MenuItem Header="_Help"/>
+        </Menu>
+        <StackPanel Name="Buttons"
+                    Grid.Row="1"
+    		Orientation="Horizontal" 
+    		Background="Gray">
+            <Button Width="50" Height="50" Margin="0, 0, 20, 0" Content="Sell" Click="OnSellClick"/>
+            <Button Width="50" Height="50" Content="Buy" Margin="0, 0, 20, 0" Click="OnBuyClick" />
+            <Button Width="50" Height="50" Content="Exit" Click="Exit"/>
+        </StackPanel>
+        <StackPanel Name="WorkStack"
+                    Grid.Row="2">
+            <Image Name="bkgImg" Source="pack://siteoforigin:,,,/img.jpg"
+               VerticalAlignment="Stretch"
+               HorizontalAlignment="Stretch"
+               Visibility="Visible" Height="405.752" Stretch="None"
+               />
+            <my:Buy x:Name="Buy" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Collapsed" Panel.ZIndex="1"/>
+            <my:Sell x:Name="Sell" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Collapsed" Panel.ZIndex="2"/>
+        </StackPanel>
+
+        <Rectangle Grid.Row="3" Fill="Gray"/>
+    </Grid>
+</Window>
