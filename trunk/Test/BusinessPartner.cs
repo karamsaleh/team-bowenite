@@ -1,5 +1,8 @@
 ﻿namespace Test
 {
+    using System;
+    using System.Text;
+
     public abstract class BusinessPartner
     {
         protected BusinessPartner(string name, string address = null, string phoneNumber = null, string email = null, string id)
@@ -62,7 +65,14 @@
 
         public override string ToString()
         {
-            return string.Format("Name: {0}, Address: {1}, PhoneNumber: {2}, Email: {3}, ID: {4}", Name, Address, PhoneNumber, Email, ID);
+            var partnerInfo = new StringBuilder();
+
+            foreach (var property in this.GetType().GetProperties())
+            {
+                partnerInfo.AppendFormat("{0}: {1} ", property.Name, property.GetValue(this));
+            }
+
+            return partnerInfo.ToString();
         }
     }
 }
