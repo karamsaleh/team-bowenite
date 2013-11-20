@@ -18,3 +18,6 @@ D:\My place\Programming\XAML\Test\Test\obj\Debug\buy.g.cs
 D:\My place\Programming\XAML\Test\Test\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\My place\Programming\XAML\Test\Test\obj\Debug\Test_MarkupCompile.lref
 D:\My place\Programming\XAML\Test\Test\bin\Debug\img.jpg
+D:\My place\Programming\XAML\svn\Test\bin\Debug\Test.exe.config
+D:\My place\Programming\XAML\svn\Test\obj\Debug\Test.exe
+D:\My place\Programming\XAML\svn\Test\obj\Debug\Test.pdb
