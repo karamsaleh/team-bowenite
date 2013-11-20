@@ -34,9 +34,9 @@
             <Image Name="bkgImg" Source="pack://siteoforigin:,,,/img.jpg"
                VerticalAlignment="Stretch"
                HorizontalAlignment="Stretch"
-               Visibility="Visible" Height="405.752" Stretch="None"
+               Visibility="Collapsed" Height="405.752" Stretch="None"
                />
-            <my:Buy x:Name="Buy" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Collapsed" Panel.ZIndex="1"/>
+            <my:Buy x:Name="Buy"  Visibility="Collapsed" Panel.ZIndex="1"/>
             <my:Sell x:Name="Sell" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Collapsed" Panel.ZIndex="2"/>
         </StackPanel>
 

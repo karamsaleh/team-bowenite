@@ -23,12 +23,14 @@ namespace Test
         public MainWindow()
         {
             InitializeComponent();
+            this.bkgImg.Visibility = Visibility.Visible;
         }
 
         private void OnSellClick(object sender, RoutedEventArgs e)
         {
             this.Sell.Visibility = Visibility.Visible;
             this.Buy.Visibility = Visibility.Collapsed;
+            this.bkgImg.Visibility = Visibility.Collapsed;
             //Sell sell = new Sell();
             //MessageBoxResult result = MessageBox.Show("If you continue, all unsaved information will be lost!", "Continue confirmation", MessageBoxButton.OKCancel);
             //if (result == MessageBoxResult.OK)
@@ -43,6 +45,7 @@ namespace Test
         {
             this.Buy.Visibility = Visibility.Visible;
             this.Sell.Visibility = Visibility.Collapsed;
+            this.bkgImg.Visibility = Visibility.Collapsed;
             //Buy buy = new Buy();
             //MessageBoxResult result = MessageBox.Show("If you continue, all unsaved information will be lost!", "Continue confirmation", MessageBoxButton.OKCancel);
             //if (result == MessageBoxResult.OK)
