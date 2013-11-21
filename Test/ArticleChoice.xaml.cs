@@ -33,5 +33,17 @@ namespace Test
         {
             this.ArticleDetails.Visibility = Visibility.Visible;
         }
+
+        private void OnCloseClickButton(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void OnAddNewButtonClick(object sender, RoutedEventArgs e)
+        {
+            Window addNewArticleWindow = new AddNewItem();
+            addNewArticleWindow.Show();
+            this.Close();
+        }
     }
 }

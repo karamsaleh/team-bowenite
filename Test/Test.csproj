@@ -61,6 +61,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddNewItem.xaml.cs">
+      <DependentUpon>AddNewItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ArticleChoice.xaml.cs">
       <DependentUpon>ArticleChoice.xaml</DependentUpon>
     </Compile>
@@ -80,6 +83,10 @@
       <DependentUpon>Sell.xaml</DependentUpon>
     </Compile>
     <Compile Include="Service.cs" />
+    <Page Include="AddNewItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ArticleChoice.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

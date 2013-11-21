@@ -72,3 +72,5 @@ D:\My place\Programming\XAML\svn\Test\bin\Debug\ko\System.Windows.Interactivity.
 D:\My place\Programming\XAML\svn\Test\bin\Debug\ru\System.Windows.Interactivity.resources.dll
 D:\My place\Programming\XAML\svn\Test\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 D:\My place\Programming\XAML\svn\Test\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+D:\My place\Programming\XAML\svn\Test\obj\Debug\AddNewItem.baml
+D:\My place\Programming\XAML\svn\Test\obj\Debug\AddNewItem.g.cs

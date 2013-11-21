@@ -3,12 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="ArticleChoice" Height="336" Width="420"
         ResizeMode="NoResize"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Topmost="True">
     <Grid>
         <ListView HorizontalAlignment="Left" 
                   Height="204" 
                   VerticalAlignment="Top" 
-                  Width="394"
+                  Width="400"
                   ScrollViewer.HorizontalScrollBarVisibility="Auto"
                   ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="10,0,0,0">
             <ListView.View>
@@ -22,11 +24,11 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Choose" Margin="321,209,10,60" Background="#FFDDDDDD" Click="Button_Click"/>
-        <Button Content="Change" Margin="10,209,321,60"/>
-        <Button Content="Close" Margin="321,259,10,10"/>
-        <Button Content="Add new" Margin="162,209,169,36"/>
-        <Button Content="Delete" Margin="10,259,321,10"/>
+        <Button Content="Choose" Margin="321,209,10,82" Background="#FFDDDDDD" Click="Button_Click"/>
+        <Button Content="Change" Margin="10,209,321,82"/>
+        <Button Content="Close" Margin="321,281,10,10" Click="OnCloseClickButton"/>
+        <Button Content="Add new" Margin="162,209,169,36" Click="OnAddNewButtonClick"/>
+        <Button Content="Delete" Margin="10,281,321,10" RenderTransformOrigin="2.191,0.522"/>
         <ListBox Name="ArticleDetails" HorizontalAlignment="Left" Height="182" Margin="10,22,0,0" VerticalAlignment="Top" Width="394" Visibility="Collapsed">
             <Grid Height="159">
                 <TextBlock Text="Name" Margin="0,0,165,88"/>
