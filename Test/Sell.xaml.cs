@@ -81,6 +81,12 @@ namespace Test
             this.CompanySellNo.Visibility = Visibility.Collapsed;
         }
 
+        private void ShowInvoices(object sender, RoutedEventArgs e)
+        {
+            Window showInvoices = new ShowInvoices();
+            showInvoices.Show();
+        }
+
 
     }
 }

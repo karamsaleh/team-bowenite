@@ -46,7 +46,9 @@
                 		     MaxLength="10"
                              Visibility="Collapsed"
                              Name="CompanySellNo"/>
-                    <Button Content="Show All Invoices" Margin="0,5,0,15"/>
+                    <Button Content="Show All Invoices" 
+                            Margin="0,5,0,15" 
+                            Click="ShowInvoices"/>
                     <Separator/>
                     <TextBlock Text="Client Name:"/>
                     <TextBlock x:Name="ClientNameField"/>
@@ -117,7 +119,7 @@
             <StackPanel x:Name="ButtonsPanel" 
                         Width="{Binding ActualWidth, ElementName=listView}">
 
-                <Button Content="Article" 
+                <Button Content="Items" 
             		Width="60"
             		Height="20"
             		Margin="0"
