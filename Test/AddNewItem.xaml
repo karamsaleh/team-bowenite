@@ -8,8 +8,8 @@
         ResizeMode="NoResize"
         Height="372" Width="427">
 
-    <UniformGrid Columns="2" Rows="9" Margin="5,5,5,5">
-        
+    <UniformGrid Columns="2" Rows="9" Margin="5,7,5,8">
+
         <Border BorderThickness="1" 
                 BorderBrush="Black" 
                 Margin="0,0,0,14">
@@ -91,20 +91,8 @@
         		<CheckBox IsChecked="True"/>
         <TextBox Text="0" Width="115" Height="24"/>
         </TextBlock>
-
-        <Border BorderThickness="1" 
-                BorderBrush="Black" 
-                Margin="0,0,0,14">
-            <TextBlock Text="Sell Price 2"/>
-        </Border>
-        <TextBlock TextAlignment="Right"
-        	Margin="0,0,0,14">
-            <TextBlock Text="Incl. VAT?"/>
-        		<CheckBox IsChecked="True"/>
-        <TextBox Text="0" Width="115" Height="24"/>
-        </TextBlock>
         <Button Content="Add" Margin="5,5,105,3" Click="OnAddButtonClick"/>
         <Button Content="Cancel" Margin="105,5,5,3" Click="OnCancelButtonClick"/>
     </UniformGrid>
-    
+
 </Window>
