@@ -27,6 +27,14 @@
 
         public int ID { get; protected set; }
 
+        public decimal FinalPrice
+        {
+            get
+            {
+                return this.SalesPrice - (this.SalesPrice * (this.Discount / 100));
+            }
+        }
+
         public override int GetHashCode()
         {
             unchecked
@@ -39,14 +47,6 @@
                 result = result * 23 + this.Value.GetHashCode();
                 result = result * 23 + this.ID.GetHashCode();
                 return result;
-            }
-        }
-
-        public decimal FinalPrice
-        {
-            get
-            {
-                return this.SalesPrice - (this.SalesPrice * (this.Discount / 100));
             }
         }
 
@@ -91,7 +91,5 @@
 
             return itemInfo.ToString();
         }
-
-       
     }
 }
