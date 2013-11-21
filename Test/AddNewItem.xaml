@@ -103,7 +103,7 @@
         		<CheckBox IsChecked="True"/>
         <TextBox Text="0" Width="115" Height="24"/>
         </TextBlock>
-        <Button Content="Add" Margin="5,5,105,3"/>
+        <Button Content="Add" Margin="5,5,105,3" Click="OnAddButtonClick"/>
         <Button Content="Cancel" Margin="105,5,5,3" Click="OnCancelButtonClick"/>
     </UniformGrid>
     

@@ -40,6 +40,10 @@ namespace Test
         {
             this.Close();
         }
-        
+
+        private void OnAddButtonClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
