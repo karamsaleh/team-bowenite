@@ -15,15 +15,14 @@ using System.Windows.Shapes;
 namespace Test
 {
     /// <summary>
-    /// Interaction logic for ArticleChoice.xaml
+    /// Interaction logic for ClientChoice.xaml
     /// </summary>
-    public partial class ArticleChoice : Window
+    public partial class ClientChoice : Window
     {
-        public ArticleChoice()
+        public ClientChoice()
         {
             InitializeComponent();
         }
-
         private void OnLostWindowFocus(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -31,7 +30,7 @@ namespace Test
 
         private void OnChoiceButtonClick(object sender, System.Windows.RoutedEventArgs e)
         {
-            this.ArticleDetails.Visibility = Visibility.Visible;
+
         }
 
         private void OnCloseClickButton(object sender, RoutedEventArgs e)
@@ -41,8 +40,8 @@ namespace Test
 
         private void OnAddNewButtonClick(object sender, RoutedEventArgs e)
         {
-            Window addNewArticleWindow = new AddNewItem();
-            addNewArticleWindow.Show();
+            Window addNewClientWindow = new AddNewClient();
+            addNewClientWindow.Show();
             this.Close();
         }
 

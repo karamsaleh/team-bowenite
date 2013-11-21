@@ -12,7 +12,7 @@
 
         public DateTime DateAndTime { get; protected set; }
         public int ID { get; protected set; }
-        public virtual string Category { get; }
+        public virtual string Category { get; set; }
 
         public abstract void Validate();
     }
