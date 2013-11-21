@@ -15,19 +15,19 @@
             //throw new NotImplementedException();
         }
 
-        public static void Sell(Item item)
-        {
-            item.Sell();
+        //public static void Sell(Item item)
+        //{
+        //    item.Sell();
 
-            Treasury.Turnover += item.FinalPrice;
-            Treasury.Profit += (item.FinalPrice - item.Value);
-        }
+        //    Treasury.Turnover += item.FinalPrice;
+        //    Treasury.Profit += (item.FinalPrice - item.Value);
+        //}
 
-        public static void Buy(Item item)
-        {
-            item.Buy();
+        //public static void Buy(Item item)
+        //{
+        //    item.Buy();
 
-            Treasury.Turnover -= item.Value;
-        }
+        //    Treasury.Turnover -= item.Value;
+        //}
     }
 }

@@ -80,12 +80,12 @@
     </Compile>
     <Compile Include="FinancialOperations.cs" />
     <Compile Include="Goods.cs" />
-    <Compile Include="InvoiceOperations.cs" />
     <Compile Include="IPurchase.cs" />
     <Compile Include="ISellable.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="Operations.cs" />
     <Compile Include="Provider.cs" />
+    <Compile Include="Sale.cs" />
     <Compile Include="Sell.xaml.cs">
       <DependentUpon>Sell.xaml</DependentUpon>
     </Compile>
