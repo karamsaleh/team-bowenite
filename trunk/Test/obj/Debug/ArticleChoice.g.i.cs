@@ -41,7 +41,7 @@ namespace Test {
     public partial class ArticleChoice : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 70 "..\..\ArticleChoice.xaml"
+        #line 69 "..\..\ArticleChoice.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListBox ArticleDetails;
         
@@ -49,7 +49,7 @@ namespace Test {
         #line hidden
         
         
-        #line 78 "..\..\ArticleChoice.xaml"
+        #line 77 "..\..\ArticleChoice.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.RadioButton SellPrice1;
         
@@ -57,7 +57,7 @@ namespace Test {
         #line hidden
         
         
-        #line 80 "..\..\ArticleChoice.xaml"
+        #line 79 "..\..\ArticleChoice.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.RadioButton SellPrice2;
         
@@ -96,7 +96,7 @@ namespace Test {
             {
             case 1:
             
-            #line 39 "..\..\ArticleChoice.xaml"
+            #line 38 "..\..\ArticleChoice.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.OnChoiceButtonClick);
             
             #line default
@@ -104,7 +104,7 @@ namespace Test {
             return;
             case 2:
             
-            #line 52 "..\..\ArticleChoice.xaml"
+            #line 51 "..\..\ArticleChoice.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.OnCloseClickButton);
             
             #line default
@@ -112,7 +112,7 @@ namespace Test {
             return;
             case 3:
             
-            #line 59 "..\..\ArticleChoice.xaml"
+            #line 58 "..\..\ArticleChoice.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.OnAddNewButtonClick);
             
             #line default
@@ -129,7 +129,7 @@ namespace Test {
             return;
             case 7:
             
-            #line 86 "..\..\ArticleChoice.xaml"
+            #line 85 "..\..\ArticleChoice.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.OnCancelButtonClick);
             
             #line default

@@ -58,3 +58,6 @@ D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\Test.Properties.Resour
 D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\Test.csproj.GenerateResource.Cache
 D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\Test.exe
 D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\Test.pdb
+D:\My place\Programming\XAML\svn\Test\bin\Debug\Test.exe.config
+D:\My place\Programming\XAML\svn\Test\obj\Debug\Test.exe
+D:\My place\Programming\XAML\svn\Test\obj\Debug\Test.pdb
