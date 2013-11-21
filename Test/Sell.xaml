@@ -18,16 +18,41 @@
                         HorizontalAlignment="Left" Width="600">
 
                 <StackPanel VerticalAlignment="Bottom">
-                    <TextBlock Text="Invoice No."/>
+                    
+                    <Grid>
+                        <TextBlock Text="Company sell: " 
+                			Width="96" Margin="0,-21,0,21"/>
+                        <RadioButton Margin="77,-21,0,21"
+                                     Checked="OnCompanyRBChecked"/>
+                        <TextBlock Text="Individual sell: "/>
+                        <RadioButton HorizontalAlignment="Right" 
+                                     Width="19"
+                                     Checked="OnIndividualRBChecked"/>
+                    </Grid>
+                    <Separator/>
+                    <TextBlock Text="Sell No."
+                               Visibility="Visible"
+                               Name="IndividualSellField"/>
+                    <TextBox Name="IndividualSellNo"
+                             Text="0"
+                		     TextAlignment="Right"
+                		     MaxLength="10"
+                             Visibility="Visible"/>
+                    <TextBlock Text="Invoice No."
+                               Visibility="Collapsed"
+                               Name="CompanySellField"/>
                     <TextBox Text="0000000000"
-                             TextAlignment="Right"/>
+                		     TextAlignment="Right"
+                		     MaxLength="10"
+                             Visibility="Collapsed"
+                             Name="CompanySellNo"/>
                     <Button Content="Show All Invoices" Margin="0,5,0,15"/>
                     <Separator/>
                     <TextBlock Text="Client Name:"/>
-                    <TextBlock Name="ClientNameField"/>
+                    <TextBlock x:Name="ClientNameField"/>
                     <Button Content="Choose Client" 
-                            Margin="0,5,0,5" 
-                            Click="OnChooseClientButtonClick"/>
+                		Margin="0,5,0,5" 
+                		Click="OnChooseClientButtonClick"/>
                 </StackPanel>
 
                 <StackPanel x:Name="SecondDownPanel" 
@@ -117,8 +142,7 @@
             </StackPanel>
 
         </StackPanel>
-        <StackPanel 
-            Grid.Row="0" Margin="10,0,10,10">
+        <StackPanel Grid.Row="0">
             <ListView x:Name="listView" 
         		      ScrollViewer.VerticalScrollBarVisibility="Visible"
         		      ScrollViewer.HorizontalScrollBarVisibility="Visible" 

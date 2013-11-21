@@ -65,6 +65,22 @@ namespace Test
             clientWindow.Show();
         }
 
+        private void OnCompanyRBChecked(object sender, RoutedEventArgs e)
+        {
+            this.IndividualSellField.Visibility = Visibility.Collapsed;
+            this.IndividualSellNo.Visibility = Visibility.Collapsed;
+            this.CompanySellField.Visibility = Visibility.Visible;
+            this.CompanySellNo.Visibility = Visibility.Visible;
+        }
+
+        private void OnIndividualRBChecked(object sender, RoutedEventArgs e)
+        {
+            this.IndividualSellField.Visibility = Visibility.Visible;
+            this.IndividualSellNo.Visibility = Visibility.Visible;
+            this.CompanySellField.Visibility = Visibility.Collapsed;
+            this.CompanySellNo.Visibility = Visibility.Collapsed;
+        }
+
 
     }
 }
