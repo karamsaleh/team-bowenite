@@ -32,9 +32,11 @@ namespace Test
             }
         }
 
-        private void DateTextBox_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void ChooseDate(object sender, MouseButtonEventArgs e)
         {
-            
+            this.ChooseDateCalendar.Visibility = Visibility.Collapsed;
+            var date = sender;
+            this.DateTextBox.Text = date.ToString().Remove(9, 9);
         }
 
         private void OnClickExitButton(object sender, RoutedEventArgs e)
@@ -52,6 +54,17 @@ namespace Test
             window.Show();
         }
 
-        
+        private void ShowCalendar(object sender, MouseButtonEventArgs e)
+        {
+            this.ChooseDateCalendar.Visibility = Visibility.Visible;
+        }
+
+        private void OnChooseClientButtonClick(object sender, RoutedEventArgs e)
+        {
+            Window clientWindow = new ClientChoice();
+            clientWindow.Show();
+        }
+
+
     }
 }
