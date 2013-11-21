@@ -4,12 +4,15 @@
 
     public abstract class Operations
     {
-        public DateTime Date { get; protected set; }
-        
-        protected Operations(DateTime date)
+        protected Operations(DateTime dateAndTime, int id)
         {
-            this.Date = date;
+            this.DateAndTime = dateAndTime;
+            this.ID = id;
         }
+
+        public DateTime DateAndTime { get; protected set; }
+        public int ID { get; protected set; }
+        public virtual string Category { get; }
 
         public abstract void Validate();
     }

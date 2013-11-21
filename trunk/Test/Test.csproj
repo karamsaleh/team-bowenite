@@ -75,6 +75,7 @@
     <Compile Include="FinancialOperations.cs" />
     <Compile Include="Goods.cs" />
     <Compile Include="InvoiceOperations.cs" />
+    <Compile Include="IPurchase.cs" />
     <Compile Include="ISellable.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="Operations.cs" />
@@ -83,6 +84,8 @@
       <DependentUpon>Sell.xaml</DependentUpon>
     </Compile>
     <Compile Include="Service.cs" />
+    <Compile Include="Stock.cs" />
+    <Compile Include="Treasury.cs" />
     <Page Include="AddNewItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

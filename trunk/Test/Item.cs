@@ -3,18 +3,21 @@
     using System;
     using System.Text;
 
-    public abstract class Item : ISellable
+    public abstract class Item : ISellable, IPurchase
     {
-        protected Item(string category, decimal salesPrice, decimal value, int code, decimal discount = 0)
+        protected Item(string name, string category, decimal salesPrice, decimal value, int id, decimal discount = 0)
         {
-            this.Category = category;
+            this.Name = name;
+            this.Group = category;
             this.SalesPrice = salesPrice;
             this.Value = value;
-            this.Code = code;
+            this.ID = id;
             this.Discount = discount;
         }
 
-        public virtual string Category { get; protected set; }
+        public string Name { get; protected set; }
+
+        public virtual string Group { get; protected set; }
 
         public decimal SalesPrice { get; protected set; }
 
@@ -22,7 +25,22 @@
 
         public decimal Value { get; protected set; }
 
-        public int Code { get; protected set; }
+        public int ID { get; protected set; }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int result = 17;
+                result = result * 23 + ((Name != null) ? this.Name.GetHashCode() : 0);
+                result = result * 23 + ((Group != null) ? this.Group.GetHashCode() : 0);
+                result = result * 23 + this.SalesPrice.GetHashCode();
+                result = result * 23 + this.Discount.GetHashCode();
+                result = result * 23 + this.Value.GetHashCode();
+                result = result * 23 + this.ID.GetHashCode();
+                return result;
+            }
+        }
 
         public decimal FinalPrice
         {
@@ -32,25 +50,10 @@
             }
         }
 
-        public virtual void Sell()
-        {
-            //
-        }
+        public virtual void Sell() { }
 
-        public override int GetHashCode()
-        {
-            unchecked
-            {
-                int result = 17;
-                result = result * 23 + ((Category != null) ? this.Category.GetHashCode() : 0);
-                result = result * 23 + this.SalesPrice.GetHashCode();
-                result = result * 23 + this.Discount.GetHashCode();
-                result = result * 23 + this.Value.GetHashCode();
-                result = result * 23 + this.Code.GetHashCode();
-                return result;
-            }
-        }
-
+        public virtual void Buy() { }
+        
         public bool Equals(Item value)
         {
             if (ReferenceEquals(null, value))
@@ -61,11 +64,12 @@
             {
                 return true;
             }
-            return Equals(this.Category, value.Category) &&
+            return Equals(this.Name, value.Name) &&
+                   Equals(this.Group, value.Group) &&
                    this.SalesPrice == value.SalesPrice &&
                    this.Discount == value.Discount &&
                    this.Value == value.Value &&
-                   this.Code == value.Code;
+                   this.ID == value.ID;
         }
 
         public override bool Equals(object obj)
@@ -87,5 +91,7 @@
 
             return itemInfo.ToString();
         }
+
+       
     }
 }
