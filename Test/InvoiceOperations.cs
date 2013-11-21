@@ -4,13 +4,15 @@
 
     public class InvoiceOperations : Operations
     {
-        public InvoiceOperations(DateTime date) : base(date)
+        public InvoiceOperations(DateTime dateAndTime, int id) : base(dateAndTime, id)
         {
         }
 
+        public override string Category { get { return "invoice operations"; } }
+        
         public override void Validate()
         {
-            throw new NotImplementedException();
+           // throw new NotImplementedException();
         }
     }
 }
