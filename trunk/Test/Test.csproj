@@ -90,6 +90,9 @@
       <DependentUpon>Sell.xaml</DependentUpon>
     </Compile>
     <Compile Include="Service.cs" />
+    <Compile Include="ShowInvoices.xaml.cs">
+      <DependentUpon>ShowInvoices.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Stock.cs" />
     <Compile Include="Treasury.cs" />
     <Page Include="AddNewClient.xaml">
@@ -125,6 +128,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Sell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShowInvoices.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
