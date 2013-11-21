@@ -63,20 +63,14 @@
 
                 </StackPanel>
             </StackPanel>
-            <StackPanel x:Name="ButtonsPanel" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5" Width="{Binding ActualWidth, ElementName=listView}">
-            	<StackPanel.RenderTransform>
-            		<TransformGroup>
-            			<ScaleTransform/>
-            			<SkewTransform AngleY="-0.924"/>
-            			<RotateTransform/>
-            			<TranslateTransform Y="-0.484"/>
-            		</TransformGroup>
-            	</StackPanel.RenderTransform>
+            <StackPanel x:Name="ButtonsPanel" 
+                        Width="{Binding ActualWidth, ElementName=listView}">
 
             	<Button Content="Article" 
             		Width="60"
             		Height="20"
-            		Margin="0"/>
+            		Margin="0"
+                    Click="OnArticleButtonClick"/>
             	<Button Content="Change" 
             		Width="60"
             		Height="20"
@@ -92,7 +86,8 @@
             	<Button Content="Exit" 
             		Width="60"
             		Height="20"
-            		Margin="0,20,0,0"/>
+            		Margin="0,20,0,0"
+                    Click="OnClickExitButton"/>
             </StackPanel>
 
         </StackPanel>
