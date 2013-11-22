@@ -40,8 +40,8 @@ namespace Test
 
         private void ShowPurchases(object sender, RoutedEventArgs e)
         {
-            Window showSells = new ShowSells();
-            showSells.Show();
+            Window showPurchases = new ShowPurchases();
+            showPurchases.Show();
         }
 
         private void ShowCalendar(object sender, MouseButtonEventArgs e)
@@ -60,8 +60,8 @@ namespace Test
 
         private void OnArticleButtonClick(object sender, RoutedEventArgs e)
         {
-            Window window = new ArticleChoice();
-            window.Show();
+            Window purchaseItemWindow = new PurchaseItemChoice();
+            purchaseItemWindow.Show();
         }
 
         private void ChooseDate(object sender, MouseButtonEventArgs e)
