@@ -2,7 +2,8 @@
 {
     public class Provider : BusinessPartner
     {
-        public Provider(string name, string address, string phoneNumber, string email) : base(name, address, phoneNumber, email)
+        public Provider(string iD, string name, string city, string address, string owner, string phoneNumber, string email, string vatRegNumber) 
+            : base(iD, name, city, address, owner, phoneNumber, email, vatRegNumber)
         {
         }
     }

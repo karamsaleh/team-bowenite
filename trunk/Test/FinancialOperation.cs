@@ -2,13 +2,13 @@
 {
     using System;
 
-    public class FinancialOperations : Operations
+    public class FinancialOperation : Operation
     {
-        public FinancialOperations(DateTime dateAndTime, int id) : base(dateAndTime, id)
+        public new const string Category = "financialOperation";
+
+        public FinancialOperation(DateTime dateAndTime, int id) : base(dateAndTime, id)
         {
         }
-
-        public override string Category { get { return "finance operations"; } }
 
         public override void Validate()
         {

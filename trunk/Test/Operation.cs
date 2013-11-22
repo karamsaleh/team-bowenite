@@ -2,9 +2,11 @@
 {
     using System;
 
-    public abstract class Operations
+    public abstract class Operation
     {
-        protected Operations(DateTime dateAndTime, int id)
+        public const string Category = "operation";
+
+        protected Operation(DateTime dateAndTime, int id)
         {
             this.DateAndTime = dateAndTime;
             this.ID = id;
@@ -12,7 +14,6 @@
 
         public DateTime DateAndTime { get; protected set; }
         public int ID { get; protected set; }
-        public virtual string Category { get; set; }
 
         public virtual void Validate() { }
     }

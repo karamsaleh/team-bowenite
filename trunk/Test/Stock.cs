@@ -3,6 +3,8 @@
     using System;
     using System.Linq;
     using System.Collections.Generic;
+    using System.IO;
+    using System.Text;
 
     public static class Stock
     {
@@ -45,6 +47,21 @@
         {
             return goodsInStock.First(g => g.Name == name);
             // return goodsInStock.FirstOrDefault(g => g.Name == name);
+        }
+
+        public static void LoadGoodsListFromDB()
+        {
+            var reader = new StreamReader(@"../../Goods.txt", Encoding.UTF8);
+            
+            using (reader)
+            {
+                string[] propertyValues = reader.ReadLine().Split(new string[] { " ," }, StringSplitOptions.RemoveEmptyEntries);
+
+                for (int i = 0; i < propertyValues.Length; i++)
+                {
+
+                }
+            }
         }
     }
 }

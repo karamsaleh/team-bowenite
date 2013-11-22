@@ -3,8 +3,10 @@
     using System;
     using System.Collections.Generic;
 
-    public class Sale : FinancialOperations
+    public class Sale : FinancialOperation
     {
+        public new const string Category = "sale";
+
         private readonly SortedSet<Goods> currentSaleGoodsList;
         private readonly SortedSet<Service> currentSaleServicesList;
 

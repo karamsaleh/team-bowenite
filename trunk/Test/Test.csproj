@@ -78,12 +78,15 @@
     <Compile Include="ClientChoice.xaml.cs">
       <DependentUpon>ClientChoice.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FinancialOperations.cs" />
+    <Compile Include="CompanySale.cs" />
+    <Compile Include="FinancialOperation.cs" />
     <Compile Include="Goods.cs" />
-    <Compile Include="IPurchase.cs" />
+    <Compile Include="IndividualSale.cs" />
+    <Compile Include="Invoice.cs" />
+    <Compile Include="IPurchasable.cs" />
     <Compile Include="ISellable.cs" />
     <Compile Include="Item.cs" />
-    <Compile Include="Operations.cs" />
+    <Compile Include="Operation.cs" />
     <Compile Include="Provider.cs" />
     <Compile Include="Sale.cs" />
     <Compile Include="Sell.xaml.cs">
