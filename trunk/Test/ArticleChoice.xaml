@@ -7,20 +7,26 @@
         WindowStyle="None"
         Topmost="True"
         BorderBrush="AliceBlue"
-        BorderThickness="2"
-        AllowsTransparency="True"
-        Background="Transparent">
+        BorderThickness="4"
+        Background="White">
 
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Blue"/>
+            <Setter Property="BorderBrush" Value="AliceBlue"/>
+            <Setter Property="BorderThickness" Value="2"/>
+        </Style>
+    </Window.Resources>
+    <Window.Effect>
+        <DropShadowEffect/>
+    </Window.Effect>
 
-
-    <Grid>
-        <Rectangle Fill="#33000000" Margin="10,0,-20,-20"/>
-        <Rectangle Fill="White" Margin="0,10,10,10"/>
-
+        <Grid Margin="-5,5,5,-5">      
         <ListView HorizontalAlignment="Left" 
                   Height="204" 
                   VerticalAlignment="Top" 
-                  Width="396"
+                  Width="402"
                   ScrollViewer.HorizontalScrollBarVisibility="Auto"
                   ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="10,0,0,0">
             <ListView.View>
@@ -28,46 +34,29 @@
                     <GridViewColumn Header="ID"/>
                     <GridViewColumn Header="Name" Width="130" />
                     <GridViewColumn Header="On Stock"/>
-                    <GridViewColumn Header="Sell Price 1"/>
-                    <GridViewColumn Header="Sell Price 2"/>
-                    <GridViewColumn Header="Stock Price"/>
+                    <GridViewColumn Header="Sell Price"/>
+                    <GridViewColumn Header="Purchase Price"/>
                 </GridView>
             </ListView.View>
         </ListView>
         <Button Content="Choose" 
-                Margin="321,209,10,82" 
-                Click="OnChoiceButtonClick"
-                Background="Transparent"
-                Foreground="Blue"
-                BorderBrush="AliceBlue"
-                BorderThickness="2"/>
+                Margin="331,209,0,82" 
+                Click="OnChoiceButtonClick"/>
         <Button Content="Change" 
-                Margin="10,209,321,82"
-                Background="Transparent"
-                Foreground="Blue"
-                BorderBrush="AliceBlue"
-                BorderThickness="2"/>
+                Margin="10,209,321,82"/>
         <Button Content="Close" 
-                Margin="321,281,10,10" 
-                Click="OnCloseClickButton"
-                Background="Transparent"
-                Foreground="Blue"
-                BorderBrush="AliceBlue"
-                BorderThickness="2"/>
+                Margin="331,281,0,10" 
+                Click="OnCloseClickButton"/>
         <Button Content="Add new" 
                 Margin="162,209,169,36" 
-                Click="OnAddNewButtonClick"
-                Background="Transparent"
-                Foreground="Blue"
-                BorderBrush="AliceBlue"
-                BorderThickness="2"/>
+                Click="OnAddNewButtonClick">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
         <Button Content="Delete" 
-                Margin="10,281,321,10" 
-                Background="Transparent"
-                Foreground="Blue"
-                BorderBrush="AliceBlue"
-                BorderThickness="2"/>
-        <ListBox Name="ArticleDetails" Height="182" Margin="10,22,10,0" VerticalAlignment="Top" Visibility="Collapsed">
+                Margin="10,281,321,10"/>
+        <ListBox Name="ArticleDetails" Height="182" Margin="10,22,0,0" VerticalAlignment="Top" Visibility="Collapsed">
             <Grid Height="159" Width="384">
                 <TextBlock Text="Name" Margin="0,0,165,88"/>
                 <TextBox Height="19" Text="NameOfTheArticle" Visibility="Visible" RenderTransformOrigin="0,0.429" Margin="102,0,105,140"/>
@@ -82,8 +71,8 @@
                 <TextBox Text="5.00" Margin="102,76,105,64"/>
                 <TextBlock Text="Discount%" Margin="0,95,158,45"/>
                 <TextBox Text="5.00" Margin="102,95,105,45"/>
-                <Button Content="Add" Margin="0,129,284,10"/>
-                <Button Content="Cancel" Margin="276,129,8,10" Click="OnCancelButtonClick"/>
+                <Button Content="Add" Margin="0,129,284,0"/>
+                <Button Content="Cancel" Margin="276,129,8,0" Click="OnCancelButtonClick"/>
                 <CheckBox Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="357,76,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.039,1.053"/>
                 <TextBlock HorizontalAlignment="Left" Height="20" Margin="293,75,0,0" TextWrapping="Wrap" Text="Incl. VAT?" VerticalAlignment="Top" Width="52"/>
             </Grid>

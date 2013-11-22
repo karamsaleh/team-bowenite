@@ -1,7 +1,7 @@
-﻿<Window x:Class="Test.ClientChoice"
+﻿<Window x:Class="Test.SellerChoice"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="ClientChoice" Height="336" Width="420"
+        Title="SellerChoice" Height="336" Width="420"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         Topmost="True"
@@ -38,7 +38,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Choose" Margin="321,209,10,82" Click="OnChoiceButtonClick"/>
+        <Button Content="Choose" Margin="321,209,10,82"/>
         <Button Content="Change" Margin="10,209,321,82"/>
         <Button Content="Close" Margin="321,281,10,10" Click="OnCloseClickButton"/>
         <Button Content="Add new" 

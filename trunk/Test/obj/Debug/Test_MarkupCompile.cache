@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\
+D:\My place\Programming\XAML\svn\Test\obj\Debug\
 Test
 none
 false
 DEBUG;TRACE
-D:\SVNProjects\TeamBoweniteTeamworkProject\Test\App.xaml
-72109417942
+D:\My place\Programming\XAML\svn\Test\App.xaml
+11-846252165
 
-24-1052090410
-191325032310
-AddNewClient.xaml;AddNewItem.xaml;ArticleChoice.xaml;Buy.xaml;ClientChoice.xaml;MainWindow.xaml;Sell.xaml;
+28-1756823449
+1930761253
+AddNewClient.xaml;AddNewItem.xaml;ArticleChoice.xaml;Buy.xaml;ClientChoice.xaml;MainWindow.xaml;Sell.xaml;SellerChoice.xaml;ShowInvoices.xaml;ShowPurchases.xaml;ShowSells.xaml;
 
 False
 
