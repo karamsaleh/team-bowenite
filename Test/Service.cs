@@ -2,12 +2,12 @@
 {
     public abstract class Service : Item
     {
+        public new const string Category = "service";
+
         public Service(string name, string category, decimal salesPrice, decimal discount, decimal value, int code) 
-            : base(name, category, salesPrice, value, code, discount)
+            : base(name, salesPrice, value, code, discount)
         {
         }
-
-        public override string Group { get { return "Services"; } }
 
         public override void Sell()
         {

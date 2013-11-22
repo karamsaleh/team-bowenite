@@ -1,6 +1,6 @@
 ﻿namespace Test
 {
-    public interface IPurchase
+    public interface IPurchasable
     {
         void Buy();
     }
