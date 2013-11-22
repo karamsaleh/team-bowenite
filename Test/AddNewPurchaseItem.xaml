@@ -1,0 +1,130 @@
+﻿<Window x:Class="Test.AddNewPurchaseItem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AddNewPurchaseItem"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Topmost="True"
+        ResizeMode="NoResize"
+        Height="372" 
+        Width="427"
+        BorderBrush="AliceBlue"
+        BorderThickness="4"
+        Background="White">
+
+    <Window.Effect>
+        <DropShadowEffect/>
+    </Window.Effect>
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Blue"/>
+            <Setter Property="BorderBrush" Value="AliceBlue"/>
+            <Setter Property="BorderThickness" Value="2"/>
+        </Style>
+        <Style TargetType="{x:Type Border}">
+            <Setter Property="BorderBrush" Value="AliceBlue"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="BorderBrush" Value="AliceBlue"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="Blue"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="Blue"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+        </Style>
+    </Window.Resources>
+    <UniformGrid Columns="2" Rows="9" Margin="5,7,5,8">
+
+        <Border Margin="0,0,0,14">
+            <TextBlock Text="ID"/>
+        </Border>
+        <TextBox Text="0" 
+                 TextAlignment="Right" 
+                 Margin="0,0,0,14"/>
+
+        <Border Margin="0,0,0,14">
+
+            <TextBlock Text="Name"/>
+        </Border>
+        <TextBox TextAlignment="Right" 
+                 Margin="0,0,0,14"/>
+
+        <Border Margin="0,0,0,14">
+            <TextBlock Text="Group" Margin="0,0,0,-1"/>
+        </Border>
+        <Button Content="Choose group" 
+                Margin="0,0,0,14"/>
+
+        <Border Margin="0,0,0,14">
+            <TextBlock Text="Stock Article"/>
+        </Border>
+        <RadioButton Name="StockRB" 
+                     Content="I want to add stock article" 
+                     Height="16" 
+                     HorizontalAlignment="Center" 
+                     Width="177" 
+                     Checked="OnStockRadioButton" 
+                     Margin="-1,1,0,14"
+                     FontStyle="Italic"
+                     Foreground="Blue"/>
+
+        <Border Margin="0,0,0,14">
+            <TextBlock Text="Service Article"/>
+        </Border>
+        <RadioButton Name="ServiceRB" 
+                     Content="I want to add service article" 
+                     Height="16" 
+                     HorizontalAlignment="Center" 
+                     Width="177" 
+                     Checked="OnServiceRadioButton" 
+                     Margin="-1,1,0,14"
+                     FontStyle="Italic"
+                     Foreground="Blue"/>
+
+        <Border Margin="0,0,0,14">
+            <TextBlock Text="Measurement"/>
+        </Border>
+        <TextBlock Name="HiddenMeasurementBox"
+                   Text="" 
+                   Visibility="Visible"
+                   Margin="0,0,0,14"/>
+        <ComboBox Name="MeasurementCB" Visibility="Collapsed" Margin="0,0,0,14">
+            <ComboBoxItem Selector.IsSelected="True" Content="kilograms" Height="100" Width="100" />
+            <ComboBoxItem Content="pieces" Height="100" Width="100"/>
+        </ComboBox>
+
+        <Border Margin="0,0,0,14">
+            <TextBlock Text="Purchase Price"/>
+        </Border>
+        <TextBlock TextAlignment="Right"
+        	Margin="0,0,0,14">
+            <TextBlock Text="Incl. VAT?"/>
+        		<CheckBox IsChecked="True"/>
+        <TextBox Text="0" 
+                 Width="115" 
+                 Height="24"/>
+        </TextBlock>
+        
+        <Border Margin="0,0,0,14">
+            <TextBlock Text="Sell Price"/>
+        </Border>
+        <TextBlock TextAlignment="Right"
+        	Margin="0,0,0,14">
+            <TextBlock Text="Incl. VAT?"/>
+        		<CheckBox IsChecked="True"/>
+        <TextBox Text="0" 
+                 Width="115" 
+                 Height="24"/>
+        </TextBlock>
+        <Button Content="Add" 
+                Margin="5,5,105,3" 
+                Click="OnAddButtonClick"/>
+        <Button Content="Cancel" 
+                Margin="105,5,5,3" 
+                Click="OnCancelButtonClick"/>
+    </UniformGrid>
+
+</Window>

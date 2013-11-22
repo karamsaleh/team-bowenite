@@ -67,6 +67,9 @@
     <Compile Include="AddNewItem.xaml.cs">
       <DependentUpon>AddNewItem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddNewPurchaseItem.xaml.cs">
+      <DependentUpon>AddNewPurchaseItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ArticleChoice.xaml.cs">
       <DependentUpon>ArticleChoice.xaml</DependentUpon>
     </Compile>
@@ -88,6 +91,9 @@
     <Compile Include="Item.cs" />
     <Compile Include="Operation.cs" />
     <Compile Include="Provider.cs" />
+    <Compile Include="PurchaseItemChoice.xaml.cs">
+      <DependentUpon>PurchaseItemChoice.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Sale.cs" />
     <Compile Include="Sell.xaml.cs">
       <DependentUpon>Sell.xaml</DependentUpon>
@@ -115,6 +121,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AddNewPurchaseItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ArticleChoice.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -139,6 +149,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PurchaseItemChoice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Sell.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

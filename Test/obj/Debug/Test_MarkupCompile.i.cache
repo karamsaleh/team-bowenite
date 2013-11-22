@@ -10,11 +10,16 @@ none
 false
 DEBUG;TRACE
 D:\SVNProjects\TeamBoweniteTeamworkProject\Test\App.xaml
-11-846252165
+131419970661
 
+<<<<<<< .mine
+34-929206876
+1930761253
+=======
 35-1094256244
 191325032310
-AddNewClient.xaml;AddNewItem.xaml;ArticleChoice.xaml;Buy.xaml;ClientChoice.xaml;MainWindow.xaml;Sell.xaml;SellerChoice.xaml;ShowInvoices.xaml;ShowPurchases.xaml;ShowSells.xaml;
+>>>>>>> .r19
+AddNewClient.xaml;AddNewItem.xaml;AddNewPurchaseItem.xaml;ArticleChoice.xaml;Buy.xaml;ClientChoice.xaml;MainWindow.xaml;PurchaseItemChoice.xaml;Sell.xaml;SellerChoice.xaml;ShowInvoices.xaml;ShowPurchases.xaml;ShowSells.xaml;
 
-True
+False
 

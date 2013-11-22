@@ -31,9 +31,9 @@
                   ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="10,0,0,0">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Sell No."/>
+                    <GridViewColumn Header="Invoice No." Width="80"/>
                     <GridViewColumn Header="Date" Width="130"/>
-                    <GridViewColumn Header="Client Name"/>
+                    <GridViewColumn Header="Seller Name"/>
                     <GridViewColumn Header="Total amount"/>
                 </GridView>
             </ListView.View>
