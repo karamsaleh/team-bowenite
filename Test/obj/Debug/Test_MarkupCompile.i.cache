@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\My place\Programming\XAML\svn\Test\App.xaml
-8360819213
+11-846252165
 
-29-495880769
+32-1980392193
 1930761253
-AddNewClient.xaml;AddNewItem.xaml;ArticleChoice.xaml;Buy.xaml;ClientChoice.xaml;MainWindow.xaml;Sell.xaml;ShowInvoices.xaml;
+AddNewClient.xaml;AddNewItem.xaml;ArticleChoice.xaml;Buy.xaml;ClientChoice.xaml;MainWindow.xaml;Sell.xaml;SellerChoice.xaml;ShowInvoices.xaml;ShowPurchases.xaml;ShowSells.xaml;
 
-False
+True
 

@@ -1,14 +1,15 @@
-﻿<Window x:Class="Test.ShowInvoices"
+﻿<Window x:Class="Test.ShowPurchases"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="ShowInvoices" Height="336" Width="420"
-        ResizeMode="NoResize"
+        Title="ShowPurchases" Height="336" Width="420"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         Topmost="True"
+        ResizeMode="NoResize"
         BorderBrush="AliceBlue"
         BorderThickness="4"
         Background="White">
+
     <Window.Resources>
         <Style TargetType="{x:Type Button}">
             <Setter Property="Background" Value="White"/>
@@ -20,7 +21,7 @@
     <Window.Effect>
         <DropShadowEffect/>
     </Window.Effect>
-    
+
     <Grid>
         <ListView HorizontalAlignment="Left" 
                   Height="204" 
@@ -30,9 +31,9 @@
                   ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="10,0,0,0">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Invoice No."/>
+                    <GridViewColumn Header="Sell No."/>
                     <GridViewColumn Header="Date" Width="130"/>
-                    <GridViewColumn Header="Company Name"/>
+                    <GridViewColumn Header="Client Name"/>
                     <GridViewColumn Header="Total amount"/>
                 </GridView>
             </ListView.View>

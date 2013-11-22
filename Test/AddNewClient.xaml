@@ -6,96 +6,95 @@
         WindowStartupLocation="CenterScreen"
         Topmost="True"
         ResizeMode="NoResize"
-        Height="372" Width="427">
+        Height="372" 
+        Width="427"
+        BorderBrush="AliceBlue"
+        BorderThickness="4"
+        Background="White" >
+    
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Blue"/>
+            <Setter Property="BorderBrush" Value="AliceBlue"/>
+            <Setter Property="BorderThickness" Value="2"/>
+        </Style>
+        <Style TargetType="{x:Type Border}">
+            <Setter Property="BorderBrush" Value="AliceBlue"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="BorderBrush" Value="AliceBlue"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="Blue"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="Blue"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+        </Style>
+    </Window.Resources>
+    <Window.Effect>
+        <DropShadowEffect/>
+    </Window.Effect>
 
-    <UniformGrid Columns="2" Rows="9" Margin="5,5,5,5">
+        <UniformGrid Columns="2" Rows="9" Margin="5,5,5,5">
 
-        <Border BorderThickness="1" 
-                BorderBrush="Black" 
-                Margin="0,0,0,14">
+        <Border Margin="0,0,0,14">
             <TextBlock Text="ID"/>
         </Border>
-        <TextBox BorderBrush="Black" 
-                 BorderThickness="1" 
-                 Text="0" 
+        <TextBox Text="0" 
                  TextAlignment="Right" 
                  Margin="0,0,0,14"/>
 
-        <Border BorderThickness="1" 
-                BorderBrush="Black" 
-                Margin="0,0,0,14">
+        <Border Margin="0,0,0,14">
 
             <TextBlock Text="Name"/>
         </Border>
-        <TextBox BorderBrush="Black" 
-                 BorderThickness="1" 
-                 TextAlignment="Right" 
+        <TextBox TextAlignment="Right" 
                  Margin="0,0,0,14"/>
 
-        <Border BorderThickness="1" 
-                BorderBrush="Black" 
-                Margin="0,0,0,14">
+        <Border Margin="0,0,0,14">
             <TextBlock Text="VAT/Reg. No." Margin="0,0,0,-1"/>
         </Border>
-        <TextBlock TextAlignment="Right"
-        	Margin="0,0,0,14">
-            <TextBlock Text="VAT reg.?"/>
+        <TextBlock TextAlignment="Right">
+        		<TextBlock Text="VAT reg.?" 
+                           Height="17"/>
+        	
         		<CheckBox IsChecked="False"/>
-        <TextBox Text=""
-                 MaxLength="9"
-                 Width="115" 
-                 Height="24"
-                 BorderBrush="Black"
-                 BorderThickness="1"/>
-        </TextBlock>
-        <Border BorderThickness="1" 
-                BorderBrush="Black" 
-                Margin="0,0,0,14">
+        	
+        		<TextBox Text=""
+        			MaxLength="9"
+        			Width="115" 
+        			Height="24"/>
+        	</TextBlock>
+        <Border Margin="0,0,0,14">
             <TextBlock Text="City"/>
         </Border>
-        <TextBox BorderBrush="Black" 
-                 BorderThickness="1" 
-                 TextAlignment="Right" 
+        <TextBox TextAlignment="Right" 
                  Margin="0,0,0,14"/>
 
-        <Border BorderThickness="1" 
-                BorderBrush="Black" 
-                Margin="0,0,0,14">
+        <Border Margin="0,0,0,14">
             <TextBlock Text="Address"/>
         </Border>
-        <TextBox BorderBrush="Black" 
-                 BorderThickness="1" 
-                 TextAlignment="Right" 
+        <TextBox TextAlignment="Right" 
                  Margin="0,0,0,14"/>
 
-        <Border BorderThickness="1" 
-                BorderBrush="Black" 
-                Margin="0,0,0,14">
+        <Border Margin="0,0,0,14">
             <TextBlock Text="Owner / CEO"/>
         </Border>
-        <TextBox BorderBrush="Black" 
-                 BorderThickness="1" 
-                 TextAlignment="Right" 
+        <TextBox TextAlignment="Right" 
                  Margin="0,0,0,14"/>
 
-        <Border BorderThickness="1" 
-                BorderBrush="Black" 
-                Margin="0,0,0,14">
+        <Border Margin="0,0,0,14">
             <TextBlock Text="Phone number"/>
         </Border>
-        <TextBox BorderBrush="Black" 
-                 BorderThickness="1" 
-                 TextAlignment="Right" 
+        <TextBox TextAlignment="Right" 
                  Margin="0,0,0,14"/>
 
-        <Border BorderThickness="1" 
-                BorderBrush="Black" 
-                Margin="0,0,0,14">
+        <Border Margin="0,0,0,14">
             <TextBlock Text="E-mail"/>
         </Border>
-        <TextBox BorderBrush="Black" 
-                 BorderThickness="1" 
-                 TextAlignment="Right" 
+        <TextBox TextAlignment="Right" 
                  Margin="0,0,0,14"/>
         <Button Content="Add" Margin="5,5,105,3"/>
         <Button Content="Cancel" Margin="105,5,5,3" Click="OnCancelButtonClick"/>

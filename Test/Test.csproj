@@ -89,9 +89,18 @@
     <Compile Include="Sell.xaml.cs">
       <DependentUpon>Sell.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SellerChoice.xaml.cs">
+      <DependentUpon>SellerChoice.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Service.cs" />
     <Compile Include="ShowInvoices.xaml.cs">
       <DependentUpon>ShowInvoices.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShowPurchases.xaml.cs">
+      <DependentUpon>ShowPurchases.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShowSells.xaml.cs">
+      <DependentUpon>ShowSells.xaml</DependentUpon>
     </Compile>
     <Compile Include="Stock.cs" />
     <Compile Include="Treasury.cs" />
@@ -131,7 +140,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="SellerChoice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ShowInvoices.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShowPurchases.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShowSells.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

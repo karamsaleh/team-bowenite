@@ -3,13 +3,166 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-        <TextBlock Text="We buy something!"/>
-        <Button Content="Click here to Buy!"
-                Width="100"
-                Height="100"
-                />
+             xmlns:sell="clr-namespace:Test;assembly=Test"
+             mc:Ignorable="d" d:DesignWidth="636.513" Height="800" 
+             >
+    <UserControl.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="SkyBlue"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="AliceBlue"/>
+            <Setter Property="BorderThickness" Value="2"/>
+        </Style>
+        <Style TargetType="{x:Type Border}">
+            <Setter Property="BorderBrush" Value="AliceBlue"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="BorderBrush" Value="AliceBlue"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="BlueViolet"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="BlueViolet"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid Height="630" VerticalAlignment="Bottom">
+        <StackPanel Name="DownStackPanel"
+                    Grid.Row="1"
+                    VerticalAlignment="Bottom"    
+                    Orientation="Horizontal" Margin="10,0,0,0">
+
+            <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left" Width="600">
+
+                <StackPanel VerticalAlignment="Bottom">
+                    <TextBlock Text="Invoice No."
+                               Visibility="Visible"
+                               Name="CompanySellField"/>
+                    <TextBox Text="0000000000"
+                		     TextAlignment="Right"
+                		     MaxLength="10"
+                             Visibility="Visible"
+                             Name="CompanySellNo"/>
+                    <Button Name="ShowAllPurchases"
+                            Content="Show All Purchases" 
+                            Margin="0,5,0,15" 
+                            Click="ShowPurchases"/>
+                    <Separator/>
+                    <TextBlock Text="Seller Name:"/>
+                    <TextBlock x:Name="ClientNameField"/>
+                    <Button Content="Choose Seller" 
+                		Margin="0,5,0,5" 
+                		Click="OnChooseSellerButtonClick"/>
+                </StackPanel>
+
+                <StackPanel x:Name="SecondDownPanel" 
+                            Margin="10, 0, 0, 0"
+                            VerticalAlignment="Bottom" 
+                            Height="142">
+
+                    <Border BorderBrush="Gray" 
+                            BorderThickness="1">
+                        <TextBlock Text="Date: " Width="123"><InlineUIContainer>
+                			<TextBlock x:Name="DateTextBox" 
+                                       Width="179"
+                                       Cursor="Pen"
+                                       MouseLeftButtonDown="ShowCalendar"/>
+                		</InlineUIContainer></TextBlock>
+                    </Border>
+                    <Calendar Name="ChooseDateCalendar"
+                		      Cursor="Pen" 
+                		      ToolTip="Click to choose date"
+                		      MouseDoubleClick="ChooseDate"
+                              Visibility="Collapsed"/>
+
+                    <UniformGrid Columns="2"
+                                 Height="74"
+                                 Margin="0,10">
+                        <Border>
+                            <UniformGrid Columns="1">
+                                <TextBlock Text="Sum"/>
+                                <TextBlock Text="Discount"/>
+                                <TextBlock Text="VAT"/>
+                                <TextBlock Text="Total"/>
+                            </UniformGrid>
+                        </Border>
+                        <Border>
+                            <UniformGrid Columns="1">
+                                <TextBlock Text="0.00"
+                                       TextAlignment="Right"/>
+                                <TextBlock Text="0.00"
+                                       TextAlignment="Right"/>
+                                <TextBlock Text="0.00"
+                                       TextAlignment="Right"/>
+                                <TextBlock Text="0.00"
+                                       TextAlignment="Right"/>
+                            </UniformGrid>
+                        </Border>
+                    </UniformGrid>
+
+                    <UniformGrid Columns="2" 
+                                 Margin="0,7">
+                        <Border>
+                            <TextBlock Text="Discount"/>
+                        </Border>
+                        <TextBox Text="0"
+                                 TextAlignment="Right"/>
+                    </UniformGrid>
+
+                </StackPanel>
+            </StackPanel>
+            <StackPanel x:Name="ButtonsPanel" 
+                        Width="{Binding ElementName=listView,Path=ActualWidth}">
+
+                <Button Content="Items" 
+            		Width="60"
+            		Height="22"
+            		Margin="0"
+                    Click="OnArticleButtonClick"/>
+                <Button Content="Change" 
+            		Width="60"
+            		Height="22"
+            		Margin="0, 20"/>
+                <Button Content="Delete" 
+            		Width="60"
+            		Height="22"
+                    />
+                <Button Content="Save" 
+            		Width="60"
+            		Height="22"
+            		Margin="0, 20"/>
+                <Button Content="Exit" 
+            		Width="60"
+            		Height="22"
+            		Margin="0,20,0,0"
+                    Click="OnClickExitButton"/>
+            </StackPanel>
+
+        </StackPanel>
+        <StackPanel Grid.Row="0" Margin="0,0,0,314">
+            <ListView x:Name="listView" 
+        		      ScrollViewer.VerticalScrollBarVisibility="Visible"
+        		      ScrollViewer.HorizontalScrollBarVisibility="Visible" 
+                      VerticalAlignment="Top" 
+                      Height="315">
+
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="ID"/>
+                        <GridViewColumn Header="Article" />
+                        <GridViewColumn Header="kg/pcs"/>
+                        <GridViewColumn Header="Quantity"/>
+                        <GridViewColumn Header="Single Price"/>
+                        <GridViewColumn Header="Discount(%)"/>
+                        <GridViewColumn Header="Total"/>
+
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+
     </Grid>
 </UserControl>

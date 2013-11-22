@@ -3,10 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:my="clr-namespace:Test"
         Title="MainWindow"
-        WindowState="Maximized">
-    
+        WindowState="Maximized"
+        Name="MW">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Blue"/>
+        </Style>
+    </Window.Resources>
+
+
     <Grid>
-        
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
             <RowDefinition Height="60"/>
@@ -23,19 +30,44 @@
         </Menu>
         <StackPanel Name="Buttons"
                     Grid.Row="1"
-    		Orientation="Horizontal" 
-    		Background="Gray">
-            <Button Width="50" Height="50" Margin="0, 0, 20, 0" Content="Sell" Click="OnSellClick"/>
-            <Button Width="50" Height="50" Content="Buy" Margin="0, 0, 20, 0" Click="OnBuyClick" />
-            <Button Width="50" Height="50" Content="Exit" Click="Exit"/>
+    		        Orientation="Horizontal" 
+    		        Background="White">
+            <StackPanel.Effect>
+                <DropShadowEffect/>
+            </StackPanel.Effect>
+            <Button Width="60" 
+        		    Height="50" 
+        		    Margin="10,0,20,0" 
+        		    Content="Sell" 
+        		    Click="OnSellClick">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button Width="60" 
+                    Height="50" 
+                    Content="Purchase" 
+                    Margin="0, 0, 20, 0" 
+                    Click="OnBuyClick">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button Width="60" 
+                    Height="50" 
+                    Content="Exit" 
+                    Click="Exit">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
         </StackPanel>
         <StackPanel Name="WorkStack"
                     Grid.Row="2">
-            <Image Name="bkgImg" Source="pack://siteoforigin:,,,/img.jpg"
-               VerticalAlignment="Stretch"
-               HorizontalAlignment="Stretch"
-               Visibility="Collapsed" Height="405.752" Stretch="None"
-               />
+            <Image Name="bkgImg" 
+                   Source="pack://siteoforigin:,,,/img.jpg"
+                   Visibility="Collapsed"
+                   Opacity="0.5"/>
             <my:Buy x:Name="Buy"  Visibility="Collapsed" Panel.ZIndex="1"/>
             <my:Sell x:Name="Sell" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Collapsed" Panel.ZIndex="2"/>
         </StackPanel>

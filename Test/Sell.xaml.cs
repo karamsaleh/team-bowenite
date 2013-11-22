@@ -69,22 +69,32 @@ namespace Test
         {
             this.IndividualSellField.Visibility = Visibility.Collapsed;
             this.IndividualSellNo.Visibility = Visibility.Collapsed;
+            this.ShowAllSellsButton.Visibility = Visibility.Collapsed;
             this.CompanySellField.Visibility = Visibility.Visible;
             this.CompanySellNo.Visibility = Visibility.Visible;
+            this.ShowAllInvoicesButton.Visibility = Visibility.Visible;
         }
 
         private void OnIndividualRBChecked(object sender, RoutedEventArgs e)
         {
             this.IndividualSellField.Visibility = Visibility.Visible;
             this.IndividualSellNo.Visibility = Visibility.Visible;
+            this.ShowAllSellsButton.Visibility = Visibility.Visible;
             this.CompanySellField.Visibility = Visibility.Collapsed;
             this.CompanySellNo.Visibility = Visibility.Collapsed;
+            this.ShowAllInvoicesButton.Visibility = Visibility.Collapsed;
         }
 
         private void ShowInvoices(object sender, RoutedEventArgs e)
         {
             Window showInvoices = new ShowInvoices();
             showInvoices.Show();
+        }
+
+        private void ShowSells(object sender, RoutedEventArgs e)
+        {
+            Window showSells = new ShowSells();
+            showSells.Show();
         }
 
 
