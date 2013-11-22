@@ -1,19 +1,19 @@
 ﻿namespace Test
 {
-    public abstract class Goods : Item
+    public class Goods : Item
     {
         public new const string Category = "goods";
 
-        protected Goods(string name, string measurement, decimal quantity, decimal salesPrice, decimal discount, decimal value, int code)
-            : base(name, salesPrice, value, code, discount)
+        public Goods(int id, string name, decimal salesPrice, decimal discount, decimal value, string measurement, decimal quantity)
+            : base(id, name, salesPrice, discount, value)
         {
             this.Measurement = measurement;
             this.Quantity = quantity;
         }
-        
-        public string Measurement { get; protected set; }
 
-        public decimal Quantity { get; protected set; }
+        public string Measurement { get; set; }
+
+        public decimal Quantity { get; set; }
 
         public override void Sell()
         {
