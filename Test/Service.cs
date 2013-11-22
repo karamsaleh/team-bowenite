@@ -3,20 +3,10 @@
     public abstract class Service : Item
     {
         public new const string Category = "service";
-
-        public Service(string name, string category, decimal salesPrice, decimal discount, decimal value, int code) 
-            : base(name, salesPrice, value, code, discount)
+       
+        public Service(int id, string name, decimal salesPrice, decimal discount, decimal value) 
+            : base(id, name, salesPrice, discount, value)
         {
-        }
-
-        public override void Sell()
-        {
-            // TODO
-        }
-
-        public override void Buy()
-        {
-            // TODO
         }
     }
 }

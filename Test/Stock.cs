@@ -13,8 +13,6 @@
         static Stock()
         {
             goodsInStock = new SortedSet<Goods>();
-            // TODO replace with
-            // goodsInStock = LoadGoodsListFromDB();
         }
 
         public static void AddGoods(Goods item)
@@ -51,16 +49,59 @@
 
         public static void LoadGoodsListFromDB()
         {
-            var reader = new StreamReader(@"../../Goods.txt", Encoding.UTF8);
-            
-            using (reader)
+            try
             {
-                string[] propertyValues = reader.ReadLine().Split(new string[] { " ," }, StringSplitOptions.RemoveEmptyEntries);
+                var reader = new StreamReader(@"../../Goods.txt", Encoding.UTF8);
 
-                for (int i = 0; i < propertyValues.Length; i++)
+                using (reader)
                 {
+                    var line = reader.ReadLine();
+                    string[] propertyValues = line.Split(new string[] { " ," }, StringSplitOptions.RemoveEmptyEntries);
 
+                    while (line != null)
+                    {
+                        goodsInStock.Add(
+                            new Goods(
+                                int.Parse(propertyValues[0]),
+                                propertyValues[1],
+                                decimal.Parse(propertyValues[2]),
+                                decimal.Parse(propertyValues[3]),
+                                decimal.Parse(propertyValues[4]),
+                                propertyValues[5],
+                                decimal.Parse(propertyValues[6])
+                                )
+                        );
+
+                        line = reader.ReadLine();
+                        propertyValues = line.Split(new string[] { " ," }, StringSplitOptions.RemoveEmptyEntries);
+                    }
                 }
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+        }
+
+        public static void SaveGoodsListToDB()
+        {
+            try
+            {
+                var writer = new StreamWriter("../../Goods.txt", false, Encoding.UTF8);
+
+                using (writer)
+                {
+                    foreach (var item in goodsInStock)
+                    {
+                        writer.WriteLine(item.ToString());
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                
+                throw;
             }
         }
     }

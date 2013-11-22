@@ -7,13 +7,13 @@
     {
         public const string Category = "item";
 
-        protected Item(string name, decimal salesPrice, decimal value, int id, decimal discount = 0)
+        public Item(int id, string name, decimal salesPrice, decimal value, decimal discount = 0)
         {
+            this.ID = id;
             this.Name = name;
             this.SalesPrice = salesPrice;
-            this.Value = value;
-            this.ID = id;
             this.Discount = discount;
+            this.Value = value;
         }
 
         public int ID { get; protected set; }
@@ -25,7 +25,6 @@
         public decimal Discount { get; protected set; }
 
         public decimal Value { get; protected set; }
-
 
         public decimal PriceWithDiscount
         {
@@ -43,9 +42,16 @@
             }
         }
 
-        public virtual void Sell() { }
+        public virtual void Sell()
+        {
+            Treasury.Turnover += this.FinalPriceWithVat;
+            Treasury.Profit += (this.FinalPriceWithVat - this.Value);
+        }
 
-        public virtual void Buy() { }
+        public virtual void Buy()
+        {
+            Treasury.Turnover -= this.Value;
+        }
 
         public override int GetHashCode()
         {
