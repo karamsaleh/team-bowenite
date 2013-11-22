@@ -5,9 +5,9 @@
 
     public abstract class BusinessPartner
     {
-        protected BusinessPartner(string iD, string name, string city, string address, string owner, string phoneNumber, string email, string vatRegNumber = null)
+        protected BusinessPartner(int id, string name, string city, string address, string owner, string phoneNumber, string email, string vatRegNumber = null)
         {
-            this.ID = iD;
+            this.ID = id;
             this.Name = name;
             this.VatRegNumber = vatRegNumber;
             this.City = city;
@@ -17,7 +17,7 @@
             this.Email = email;
         }
 
-        public string ID { get; protected set; }
+        public int ID { get; protected set; }
 
         public string Name { get; protected set; }
 
@@ -38,7 +38,7 @@
             unchecked
             {
                 int result = 17;
-                result = result * 23 + ((ID != null) ? this.ID.GetHashCode() : 0);
+                result = result * 23 + this.ID.GetHashCode();
                 result = result * 23 + ((Name != null) ? this.Name.GetHashCode() : 0);
                 result = result * 23 + ((VatRegNumber != null) ? this.VatRegNumber.GetHashCode() : 0);
                 result = result * 23 + ((City != null) ? this.City.GetHashCode() : 0);
@@ -60,7 +60,7 @@
             {
                 return true;
             }
-            return Equals(this.ID, value.ID) &&
+            return this.ID == value.ID &&
                    Equals(this.Name, value.Name) &&
                    Equals(this.VatRegNumber, value.VatRegNumber) &&
                    Equals(this.City, value.City) &&
