@@ -82,6 +82,7 @@
       <DependentUpon>ClientChoice.xaml</DependentUpon>
     </Compile>
     <Compile Include="CompanySale.cs" />
+    <Compile Include="DataHandler.cs" />
     <Compile Include="FinancialOperation.cs" />
     <Compile Include="Goods.cs" />
     <Compile Include="IndividualSale.cs" />

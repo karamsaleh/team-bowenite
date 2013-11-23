@@ -10,7 +10,6 @@
         }
 
         public string Measurement { get; set; }
-
         public decimal Quantity { get; set; }
 
         public override void Sell()
@@ -21,6 +20,12 @@
         public override void Buy()
         {
             Stock.AddGoods(this);
+        }
+
+        public override string ToString()
+        {
+            return string.Format("{0};{1};{2};{3};{4};{5};{6};{7}",
+                this.ID, this.Category, this.Name, this.SalesPrice, this.Discount, this.Value, this.Measurement, this.Quantity);
         }
     }
 }

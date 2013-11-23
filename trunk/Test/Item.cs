@@ -102,6 +102,7 @@
 
             foreach (var property in this.GetType().GetProperties())
             {
+                this.GetType().GetProperty("Category").SetValue(this, "new");
                 itemInfo.AppendFormat("{0} ,", property.GetValue(this));
             }
 

@@ -23,22 +23,16 @@
     </Window.Effect>
 
         <Grid Margin="-5,5,5,-5">      
-        <ListView HorizontalAlignment="Left" 
+        <DataGrid Name="dgArticles"
+                  HorizontalAlignment="Left" 
                   Height="204" 
                   VerticalAlignment="Top" 
                   Width="402"
                   ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                  ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="10,0,0,0">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="ID"/>
-                    <GridViewColumn Header="Name" Width="130" />
-                    <GridViewColumn Header="On Stock"/>
-                    <GridViewColumn Header="Sell Price"/>
-                    <GridViewColumn Header="Purchase Price"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
+                  ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="10,0,0,0"
+                  Loaded="ArticlesGrid_Loaded"
+                  AlternatingRowBackground="AliceBlue">
+        </DataGrid>
         <Button Content="Choose" 
                 Margin="331,209,0,82" 
                 Click="OnChoiceButtonClick"/>
@@ -60,14 +54,14 @@
                  Visibility="Collapsed">
             <Grid Height="159" Width="384">
                 <TextBlock Text="Name" Margin="0,0,165,88"/>
-                <TextBox Height="19" Text="NameOfTheArticle" Visibility="Visible" RenderTransformOrigin="0,0.429" Margin="102,0,105,140"/>
+                <TextBox Name="tbArticleName" IsReadOnly="True" Height="19" Text="NameOfTheArticle" Visibility="Visible" RenderTransformOrigin="0,0.429" Margin="102,0,105,140"/>
                 <TextBlock Text="Quantity" Margin="0,21,165,69"/>
-                <TextBox Text="15" Margin="102,19,105,118"/>
+                <TextBox Name="tbQuantity" Margin="102,19,105,118"/>
                 
                 <TextBlock Text="Sell Price" Margin="0,76,158,64"/>
-                <TextBox Text="5.00" Margin="102,76,105,64"/>
+                <TextBox Name="tbSellPrice" Text="5.00" Margin="102,76,105,64"/>
                 <TextBlock Text="Discount%" Margin="0,95,158,45"/>
-                <TextBox Text="5.00" Margin="102,95,105,45"/>
+                <TextBox Name="tbDiscount" Text="5.00" Margin="102,95,105,45"/>
                 <Button Content="Add" Margin="0,129,284,0"/>
                 <Button Content="Cancel" Margin="276,129,8,0" Click="OnCancelButtonClick"/>
                 <CheckBox Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="357,76,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.039,1.053"/>
