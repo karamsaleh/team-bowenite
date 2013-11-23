@@ -2,10 +2,8 @@
 {
     public class Goods : Item
     {
-        public new const string Category = "goods";
-
-        public Goods(int id, string name, decimal salesPrice, decimal discount, decimal value, string measurement, decimal quantity)
-            : base(id, name, salesPrice, discount, value)
+        public Goods(int id, string category, string name, decimal salesPrice, decimal discount, decimal value, string measurement, decimal quantity)
+            : base(id, category, name, salesPrice, discount, value)
         {
             this.Measurement = measurement;
             this.Quantity = quantity;

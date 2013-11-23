@@ -5,11 +5,10 @@
 
     public abstract class Item : ISellable, IPurchasable
     {
-        public const string Category = "item";
-
-        public Item(int id, string name, decimal salesPrice, decimal value, decimal discount = 0)
+        protected Item(int id, string category, string name, decimal salesPrice, decimal discount, decimal value)
         {
             this.ID = id;
+            this.Category = category;
             this.Name = name;
             this.SalesPrice = salesPrice;
             this.Discount = discount;
@@ -18,6 +17,8 @@
 
         public int ID { get; protected set; }
 
+        public string Category { get; set; }
+
         public string Name { get; protected set; }
 
         public decimal SalesPrice { get; protected set; }
@@ -25,6 +26,7 @@
         public decimal Discount { get; protected set; }
 
         public decimal Value { get; protected set; }
+
 
         public decimal PriceWithDiscount
         {
@@ -58,11 +60,12 @@
             unchecked
             {
                 int result = 17;
+                result = result * 23 + this.ID.GetHashCode();
+                result = result * 23 + ((Category != null) ? this.Category.GetHashCode() : 0);
                 result = result * 23 + ((Name != null) ? this.Name.GetHashCode() : 0);
                 result = result * 23 + this.SalesPrice.GetHashCode();
                 result = result * 23 + this.Discount.GetHashCode();
                 result = result * 23 + this.Value.GetHashCode();
-                result = result * 23 + this.ID.GetHashCode();
                 return result;
             }
         }
@@ -77,11 +80,12 @@
             {
                 return true;
             }
-            return Equals(this.Name, value.Name) &&
+            return this.ID == value.ID &&
+                   Equals(this.Category, value.Category) &&
+                   Equals(this.Name, value.Name) &&
                    this.SalesPrice == value.SalesPrice &&
                    this.Discount == value.Discount &&
-                   this.Value == value.Value &&
-                   this.ID == value.ID;
+                   this.Value == value.Value;
         }
 
         public override bool Equals(object obj)
