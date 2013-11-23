@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +33,11 @@ namespace Test
         private void OnChoiceButtonClick(object sender, System.Windows.RoutedEventArgs e)
         {
             this.ArticleDetails.Visibility = Visibility.Visible;
+
+            Goods selectedGoods = this.dgArticles.SelectedItem as Goods;
+            this.tbArticleName.Text = selectedGoods.Name;
+            this.tbSellPrice.Text = selectedGoods.SalesPrice.ToString();
+            this.tbDiscount.Text = selectedGoods.Discount.ToString();
         }
 
         private void OnCloseClickButton(object sender, RoutedEventArgs e)
@@ -49,6 +55,12 @@ namespace Test
         private void OnCancelButtonClick(object sender, RoutedEventArgs e)
         {
             this.ArticleDetails.Visibility = Visibility.Collapsed;
+        }
+
+        private void ArticlesGrid_Loaded(object sender, RoutedEventArgs e)
+        {
+            List<Goods> items = DataHandler.LoadGoods();
+            dgArticles.ItemsSource = items;
         }
     }
 }

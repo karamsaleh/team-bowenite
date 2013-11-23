@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\
+D:\Bowenite\Test\obj\Debug\
 Test
 none
 false
 DEBUG;TRACE
-D:\SVNProjects\TeamBoweniteTeamworkProject\Test\App.xaml
+D:\Bowenite\Test\App.xaml
 131419970661
 
-37-43070927
+382092482323
 191325032310
 AddNewClient.xaml;AddNewItem.xaml;AddNewPurchaseItem.xaml;ArticleChoice.xaml;Buy.xaml;ClientChoice.xaml;MainWindow.xaml;PurchaseItemChoice.xaml;Sell.xaml;SellerChoice.xaml;ShowInvoices.xaml;ShowPurchases.xaml;ShowSells.xaml;
 
