@@ -24,6 +24,7 @@
             <MenuItem Header="_Operations">
                 <MenuItem Header="_Sell" InputGestureText="Alt + S"/>
                 <MenuItem Header="_Buy" InputGestureText="Alt + B"/>
+                <MenuItem Header="_Filter" InputGestureText="Alt + F"/>
                 <MenuItem Header="_Exit" InputGestureText="Alt + E"/>
             </MenuItem>
             <MenuItem Header="_Help"/>
@@ -53,10 +54,20 @@
                     <DropShadowEffect/>
                 </Button.Effect>
             </Button>
+            <Button 
+                Width="60" 
+            	Height="50" 
+            	Content="Filter" 
+            	Margin="0,5,20,5"
+                Click="OnFilterClicked">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
             <Button Width="60" 
                     Height="50" 
                     Content="Exit" 
-                    Click="Exit">
+                    Click="Exit" Margin="0,5">
                 <Button.Effect>
                     <DropShadowEffect/>
                 </Button.Effect>
@@ -70,6 +81,7 @@
                    Opacity="0.5"/>
             <my:Buy x:Name="Buy"  Visibility="Collapsed" Panel.ZIndex="1"/>
             <my:Sell x:Name="Sell" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Collapsed" Panel.ZIndex="2"/>
+            <my:Filter x:Name="Filter" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Collapsed" Panel.ZIndex="3"/>
         </StackPanel>
 
         <Rectangle Grid.Row="3" Fill="Gray"/>

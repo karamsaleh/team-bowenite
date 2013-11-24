@@ -31,6 +31,7 @@ namespace Test
             this.Sell.Visibility = Visibility.Visible;
             this.Buy.Visibility = Visibility.Collapsed;
             this.bkgImg.Visibility = Visibility.Collapsed;
+            this.Filter.Visibility = Visibility.Collapsed;
             //Sell sell = new Sell();
             //MessageBoxResult result = MessageBox.Show("If you continue, all unsaved information will be lost!", "Continue confirmation", MessageBoxButton.OKCancel);
             //if (result == MessageBoxResult.OK)
@@ -46,6 +47,7 @@ namespace Test
             this.Buy.Visibility = Visibility.Visible;
             this.Sell.Visibility = Visibility.Collapsed;
             this.bkgImg.Visibility = Visibility.Collapsed;
+            this.Filter.Visibility = Visibility.Collapsed;
             //Buy buy = new Buy();
             //MessageBoxResult result = MessageBox.Show("If you continue, all unsaved information will be lost!", "Continue confirmation", MessageBoxButton.OKCancel);
             //if (result == MessageBoxResult.OK)
@@ -64,6 +66,14 @@ namespace Test
                 Environment.Exit(1);
             }
             
+        }
+
+        private void OnFilterClicked(object sender, RoutedEventArgs e)
+        {
+            this.Filter.Visibility = Visibility.Visible;
+            this.Buy.Visibility = Visibility.Collapsed;
+            this.Sell.Visibility = Visibility.Collapsed;
+            this.bkgImg.Visibility = Visibility.Collapsed;
         }
     }
 }

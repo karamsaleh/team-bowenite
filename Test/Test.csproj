@@ -83,6 +83,9 @@
     </Compile>
     <Compile Include="CompanySale.cs" />
     <Compile Include="DataHandler.cs" />
+    <Compile Include="Filter.xaml.cs">
+      <DependentUpon>Filter.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FinancialOperation.cs" />
     <Compile Include="Goods.cs" />
     <Compile Include="IndividualSale.cs" />
@@ -135,6 +138,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ClientChoice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Filter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
