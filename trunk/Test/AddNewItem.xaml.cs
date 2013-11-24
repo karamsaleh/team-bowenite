@@ -45,11 +45,19 @@ namespace Test
         {
             if (rbStock.IsChecked.GetValueOrDefault())
             {
+                ComboBoxItem cbItem = (ComboBoxItem)cbMeasurement.SelectedItem;
+
                 Goods item = new Goods(int.Parse(tbID.Text), string.Empty, tbSellPrice.Text, 
                     decimal.Parse(tbSellPrice.Text), decimal.Parse(tbDiscount.Text),decimal.Parse(tbValue.Text),
-                    cbMeasurement.SelectedItem.ToString(), 0);
+                    cbItem.Content.ToString(), 0);
 
-                
+                List<Goods> goods = DataHandler.Instance.LoadGoods();
+                goods.Add(item);
+                DataHandler.Instance.SaveGoods(goods);
+                Window artChoice = new ArticleChoice();
+                artChoice.Show();
+                this.Close();
+
             }
         }
     }
