@@ -1,4 +1,2 @@
-1;Beverages;Cola;3;0;2;liters;3
-2;Beverages;Sprite;3;0;2;liters;3
-3;Beverages;Fanta;3;0;2;liters;3
-4;Beverages;Pepsi;3;0;2;liters;3
+1;Beverages;Cola;3;0;2;liter;3
+1;;5;5;6;4;kilograms;0
