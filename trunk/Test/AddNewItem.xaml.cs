@@ -27,12 +27,12 @@ namespace Test
         private void OnStockRadioButton(object sender, RoutedEventArgs e)
         {
             this.HiddenMeasurementBox.Visibility = Visibility.Collapsed;
-            this.MeasurementCB.Visibility = Visibility.Visible;
+            this.cbMeasurement.Visibility = Visibility.Visible;
         }
 
         private void OnServiceRadioButton(object sender, RoutedEventArgs e)
         {
-            this.MeasurementCB.Visibility = Visibility.Collapsed;
+            this.cbMeasurement.Visibility = Visibility.Collapsed;
             this.HiddenMeasurementBox.Visibility = Visibility.Visible;
         }
 
@@ -43,7 +43,14 @@ namespace Test
 
         private void OnAddButtonClick(object sender, RoutedEventArgs e)
         {
+            if (rbStock.IsChecked.GetValueOrDefault())
+            {
+                Goods item = new Goods(int.Parse(tbID.Text), string.Empty, tbSellPrice.Text, 
+                    decimal.Parse(tbSellPrice.Text), decimal.Parse(tbDiscount.Text),decimal.Parse(tbValue.Text),
+                    cbMeasurement.SelectedItem.ToString(), 0);
 
+                
+            }
         }
     }
 }

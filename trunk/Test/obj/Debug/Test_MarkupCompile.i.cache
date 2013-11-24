@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Boyan\Documents\Telerik Team Project\Test\obj\Debug\
+D:\Bowenite\Test\obj\Debug\
 Test
 none
 false
 DEBUG;TRACE
-C:\Users\Boyan\Documents\Telerik Team Project\Test\App.xaml
+D:\Bowenite\Test\App.xaml
 14-1971179432
 
-39561052727
+39333668144
 191325032310
 AddNewClient.xaml;AddNewItem.xaml;AddNewPurchaseItem.xaml;ArticleChoice.xaml;Buy.xaml;ClientChoice.xaml;Filter.xaml;MainWindow.xaml;PurchaseItemChoice.xaml;Sell.xaml;SellerChoice.xaml;ShowInvoices.xaml;ShowPurchases.xaml;ShowSells.xaml;
 
-False
+True
 
