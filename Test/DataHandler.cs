@@ -7,12 +7,26 @@ using System.Threading.Tasks;
 
 namespace Test
 {
-    public static class DataHandler
+    public class DataHandler
     {
-        public static List<Goods> LoadGoods()
+        private static DataHandler instance;
+
+        public static DataHandler Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new DataHandler();
+                }
+                return instance;
+            }
+        }
+
+        public List<Goods> LoadGoods()
         {
             List<Goods> result = new List<Goods>();
-            using (StreamReader reader = new StreamReader("../../Goods.txt"))
+            using (StreamReader reader = new StreamReader("../../data/Goods.txt"))
             {
                 while (true)
                 {
@@ -28,6 +42,17 @@ namespace Test
                 }
             }
             return result;
+        }
+
+        public void SaveGoods(List<Goods> items)
+        {
+            using (StreamWriter writer = new StreamWriter("../../data/Goods.txt", false))
+            {
+                foreach (var item in items)
+                {
+                    writer.WriteLine(item);
+                }
+            }
         }
     }
 }

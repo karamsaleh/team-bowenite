@@ -41,7 +41,7 @@
         <Border Margin="0,0,0,14">
             <TextBlock Text="ID"/>
         </Border>
-        <TextBox Text="0" 
+        <TextBox Name="tbID"
                  TextAlignment="Right" 
                  Margin="0,0,0,14"/>
 
@@ -49,7 +49,7 @@
 
             <TextBlock Text="Name"/>
         </Border>
-        <TextBox TextAlignment="Right" 
+        <TextBox Name="tbName" TextAlignment="Right" 
                  Margin="0,0,0,14"/>
 
         <Border Margin="0,0,0,14">
@@ -61,7 +61,7 @@
         <Border Margin="0,0,0,14">
             <TextBlock Text="Stock Article"/>
         </Border>
-        <RadioButton Name="StockRB" 
+        <RadioButton Name="rbStock" 
                      Content="I want to add stock article" 
                      Height="16" 
                      HorizontalAlignment="Center" 
@@ -74,7 +74,7 @@
         <Border Margin="0,0,0,14">
             <TextBlock Text="Service Article"/>
         </Border>
-        <RadioButton Name="ServiceRB" 
+        <RadioButton Name="rbService" 
                      Content="I want to add service article" 
                      Height="16" 
                      HorizontalAlignment="Center" 
@@ -91,11 +91,18 @@
                    Text="" 
                    Visibility="Visible"
                    Margin="0,0,0,14"/>
-        <ComboBox Name="MeasurementCB" Visibility="Collapsed" Margin="0,0,0,14">
+        <ComboBox Name="cbMeasurement" Visibility="Collapsed" Margin="0,0,0,14">
             <ComboBoxItem Selector.IsSelected="True" Content="kilograms" Height="100" Width="100" />
             <ComboBoxItem Content="pieces" Height="100" Width="100"/>
+            <ComboBoxItem Content="liters" Height="100" Width="100"/>
         </ComboBox>
 
+        <Border Margin="0,0,0,14">
+            <TextBlock Text="Value"/>
+        </Border>
+        <TextBox Name="tbValue" TextAlignment="Right" 
+                 Margin="0,0,0,14"/>
+        
         <Border Margin="0,0,0,14">
             <TextBlock Text="Sell Price"/>
         </Border>
@@ -103,10 +110,16 @@
         	Margin="0,0,0,14">
             <TextBlock Text="Incl. VAT?"/>
         		<CheckBox IsChecked="True"/>
-        <TextBox Text="0" 
-                 Width="115" 
+        <TextBox Name="tbSellPrice" Width="115" 
                  Height="24"/>
         </TextBlock>
+
+        <Border Margin="0,0,0,14">
+            <TextBlock Text="Discount"/>
+        </Border>
+        <TextBox Name="tbDiscount" TextAlignment="Right" 
+                 Margin="0,0,0,14"/>
+
         <Button Content="Add" 
                 Margin="5,5,105,3" 
                 Click="OnAddButtonClick"/>

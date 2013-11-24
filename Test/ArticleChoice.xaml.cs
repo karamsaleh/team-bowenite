@@ -59,7 +59,7 @@ namespace Test
 
         private void ArticlesGrid_Loaded(object sender, RoutedEventArgs e)
         {
-            List<Goods> items = DataHandler.LoadGoods();
+            List<Goods> items = DataHandler.Instance.LoadGoods();
             dgArticles.ItemsSource = items;
         }
     }
