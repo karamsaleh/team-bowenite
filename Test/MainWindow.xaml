@@ -79,9 +79,19 @@
                    Source="pack://siteoforigin:,,,/img.jpg"
                    Visibility="Collapsed"
                    Opacity="0.5"/>
-            <my:Buy x:Name="Buy"  Visibility="Collapsed" Panel.ZIndex="1"/>
-            <my:Sell x:Name="Sell" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Collapsed" Panel.ZIndex="2"/>
-            <my:Filter x:Name="Filter" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Collapsed" Panel.ZIndex="3"/>
+            <my:Buy x:Name="Buy"  
+                    Visibility="Collapsed" 
+                    Panel.ZIndex="1"/>
+            <my:Sell x:Name="Sell" 
+                     HorizontalAlignment="Stretch" 
+                     VerticalAlignment="Stretch" 
+                     Visibility="Collapsed" 
+                     Panel.ZIndex="2"/>
+            <my:Filter x:Name="Filter" 
+                       HorizontalAlignment="Stretch" 
+                       VerticalAlignment="Stretch" 
+                       Visibility="Collapsed" 
+                       Panel.ZIndex="3"/>
         </StackPanel>
 
         <Rectangle Grid.Row="3" Fill="Gray"/>

@@ -292,3 +292,4 @@ D:\My place\Programming\XAML\svn\Test\obj\Debug\MainWindow.baml
 D:\My place\Programming\XAML\svn\Test\obj\Debug\Test.g.resources
 D:\My place\Programming\XAML\svn\Test\obj\Debug\Test.Properties.Resources.resources
 D:\My place\Programming\XAML\svn\Test\obj\Debug\Test.csproj.GenerateResource.Cache
+D:\My place\Programming\XAML\svn\Test\bin\Debug\System.Data.SqlServerCe.dll

@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:sell="clr-namespace:Test;assembly=Test"
-             mc:Ignorable="d" d:DesignWidth="636.513" Height="800" 
-             >
-    <UserControl.Resources>
+             xmlns:local="clr-namespace:Test;assembly=Test"
+             
+             mc:Ignorable="d" d:DesignWidth="636.513" Height="800" >
+        <UserControl.Resources>
         <Style TargetType="{x:Type Button}">
             <Setter Property="Background" Value="SkyBlue"/>
             <Setter Property="Foreground" Value="White"/>
@@ -35,7 +35,7 @@
 
             <StackPanel Orientation="Horizontal"
                         VerticalAlignment="Bottom"
-                        HorizontalAlignment="Left" Width="600">
+                        HorizontalAlignment="Left" Width="586">
 
                 <StackPanel VerticalAlignment="Bottom">
                     
@@ -140,53 +140,40 @@
                 </StackPanel>
             </StackPanel>
             <StackPanel x:Name="ButtonsPanel" 
-                        Width="{Binding ElementName=listView,Path=ActualWidth}">
+                        Width="{Binding ElementName=dgCurrentSell,Path=ActualWidth}">
 
                 <Button Content="Items" 
-            		Width="60"
-            		Height="22"
+            		Width="70"
+            		Height="30"
             		Margin="0"
                     Click="OnArticleButtonClick"/>
                 <Button Content="Change" 
-            		Width="60"
-            		Height="22"
+            		Width="70"
+            		Height="30"
             		Margin="0, 20"/>
                 <Button Content="Delete" 
-            		Width="60"
-            		Height="22"
+            		Width="70"
+            		Height="30"
                     />
                 <Button Content="Save" 
-            		Width="60"
-            		Height="22"
+            		Width="70"
+            		Height="30"
             		Margin="0, 20"/>
                 <Button Content="Exit" 
-            		Width="60"
-            		Height="22"
+            		Width="70"
+            		Height="30"
             		Margin="0,20,0,0"
                     Click="OnClickExitButton"/>
             </StackPanel>
 
         </StackPanel>
         <StackPanel Grid.Row="0" Margin="0,0,0,314">
-            <ListView x:Name="listView" 
+            <DataGrid Name="dgCurrentSell" 
         		      ScrollViewer.VerticalScrollBarVisibility="Visible"
         		      ScrollViewer.HorizontalScrollBarVisibility="Visible" 
                       VerticalAlignment="Top" 
                       Height="315">
-
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn Header="ID"/>
-                        <GridViewColumn Header="Article" />
-                        <GridViewColumn Header="kg/pcs"/>
-                        <GridViewColumn Header="Quantity"/>
-                        <GridViewColumn Header="Single Price"/>
-                        <GridViewColumn Header="Discount(%)"/>
-                        <GridViewColumn Header="Total"/>
-
-                    </GridView>
-                </ListView.View>
-            </ListView>
+            </DataGrid>
         </StackPanel>
 
     </Grid>

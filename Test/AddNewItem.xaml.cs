@@ -38,7 +38,7 @@ namespace Test
 
         private void OnCancelButtonClick(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            this.Visibility = Visibility.Collapsed;
         }
 
         private void OnAddButtonClick(object sender, RoutedEventArgs e)
@@ -47,7 +47,7 @@ namespace Test
             {
                 ComboBoxItem cbItem = (ComboBoxItem)cbMeasurement.SelectedItem;
 
-                Goods item = new Goods(int.Parse(tbID.Text), string.Empty, tbSellPrice.Text, 
+                Goods item = new Goods(int.Parse(tbID.Text), string.Empty, tbName.Text, 
                     decimal.Parse(tbSellPrice.Text), decimal.Parse(tbDiscount.Text),decimal.Parse(tbValue.Text),
                     cbItem.Content.ToString(), 0);
 
