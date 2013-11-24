@@ -32,14 +32,7 @@ namespace Test
             this.Buy.Visibility = Visibility.Collapsed;
             this.bkgImg.Visibility = Visibility.Collapsed;
             this.Filter.Visibility = Visibility.Collapsed;
-            //Sell sell = new Sell();
-            //MessageBoxResult result = MessageBox.Show("If you continue, all unsaved information will be lost!", "Continue confirmation", MessageBoxButton.OKCancel);
-            //if (result == MessageBoxResult.OK)
-            //{
-            //    int count = this.WorkStack.Children.Count;
-            //    this.WorkStack.Children.RemoveRange(0, count);
-            //    this.WorkStack.Children.Add(sell);
-            //}
+
         }
 
         private void OnBuyClick(object sender, RoutedEventArgs e)

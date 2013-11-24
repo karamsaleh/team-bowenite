@@ -21,16 +21,26 @@ namespace Test
     /// </summary>
     public partial class Sell : UserControl
     {
+        ArticleChoice window;
+
         public Sell()
         {
             InitializeComponent();
+            window = new ArticleChoice();
+            window.btnAdd.Click += new RoutedEventHandler(dgCurrSell_DataBind);
+            dgCurrentSell.ItemsSource = new List<Goods>();
             this.DateTextBox.Text = DateTime.Now.ToShortDateString();
             if (LicenseManager.UsageMode != LicenseUsageMode.Designtime)
             {
                 this.Width = double.NaN; ;
                 this.Height = double.NaN; ;
             }
+
+
+
         }
+
+
 
         private void ChooseDate(object sender, MouseButtonEventArgs e)
         {
@@ -48,9 +58,19 @@ namespace Test
             }
         }
 
+
+        private void dgCurrSell_DataBind(object sender, RoutedEventArgs e)
+        {
+            List<Goods> goods = dgCurrentSell.ItemsSource as List<Goods>;
+            Goods item = window.dgArticles.SelectedItem as Goods;
+            item.Quantity = int.Parse(window.tbQuantity.Text);
+            goods.Add(item);
+            dgCurrentSell.ItemsSource = goods;
+            dgCurrentSell.Items.Refresh();
+        }
+
         private void OnArticleButtonClick(object sender, RoutedEventArgs e)
         {
-            Window window = new ArticleChoice();
             window.Show();
         }
 

@@ -1,22 +1,24 @@
 ﻿<Window x:Class="Test.ArticleChoice"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Test.Properties"
         Title="ArticleChoice" Height="336" Width="420"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
-        Topmost="True"
         BorderBrush="AliceBlue"
         BorderThickness="4"
         Background="White">
 
     <Window.Resources>
-        <Style TargetType="{x:Type Button}">
+        
+            <Style TargetType="{x:Type Button}">
             <Setter Property="Background" Value="White"/>
             <Setter Property="Foreground" Value="Blue"/>
             <Setter Property="BorderBrush" Value="AliceBlue"/>
             <Setter Property="BorderThickness" Value="2"/>
         </Style>
+                
     </Window.Resources>
     <Window.Effect>
         <DropShadowEffect/>
@@ -62,7 +64,7 @@
                 <TextBox Name="tbSellPrice" Text="5.00" Margin="102,76,105,64"/>
                 <TextBlock Text="Discount%" Margin="0,95,158,45"/>
                 <TextBox Name="tbDiscount" Text="5.00" Margin="102,95,105,45"/>
-                <Button Content="Add" Margin="0,129,284,0"/>
+                <Button Name="btnAdd" Content="Add" Margin="0,129,284,0" Click="AddItemForSell"/>
                 <Button Content="Cancel" Margin="276,129,8,0" Click="OnCancelButtonClick"/>
                 <CheckBox Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="357,76,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.039,1.053"/>
                 <TextBlock HorizontalAlignment="Left" Height="20" Margin="293,75,0,0" TextWrapping="Wrap" Text="Incl. VAT?" VerticalAlignment="Top" Width="52"/>

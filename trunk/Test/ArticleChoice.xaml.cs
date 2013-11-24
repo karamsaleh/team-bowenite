@@ -20,9 +20,12 @@ namespace Test
     /// </summary>
     public partial class ArticleChoice : Window
     {
+        private List<Goods> forSell = new List<Goods>();
+
         public ArticleChoice()
         {
             InitializeComponent();
+            
         }
 
         private void OnLostWindowFocus(object sender, RoutedEventArgs e)
@@ -42,14 +45,15 @@ namespace Test
 
         private void OnCloseClickButton(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            this.Visibility = Visibility.Collapsed;
         }
 
         private void OnAddNewButtonClick(object sender, RoutedEventArgs e)
         {
             Window addNewArticleWindow = new AddNewItem();
             addNewArticleWindow.Show();
-            this.Close();
+            //this.Visibility = Visibility.Collapsed;
+            
         }
 
         private void OnCancelButtonClick(object sender, RoutedEventArgs e)
@@ -61,6 +65,19 @@ namespace Test
         {
             List<Goods> items = DataHandler.Instance.LoadGoods();
             dgArticles.ItemsSource = items;
+        }
+
+        private void AddItemForSell(object sender, RoutedEventArgs e)
+        {
+            Goods selectedGoods = this.dgArticles.SelectedItem as Goods;
+            forSell.Add(selectedGoods);
+            this.Visibility = Visibility.Collapsed;
+            this.ArticleDetails.Visibility = Visibility.Collapsed;
+        }
+
+        public List<Goods> GoodsForSell
+        {
+            get { return forSell; }
         }
     }
 }
