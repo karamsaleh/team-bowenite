@@ -35,7 +35,6 @@ D:\SVNProjects\TeamBoweniteTeamworkProject\Test\bin\Debug\ko\System.Windows.Inte
 D:\SVNProjects\TeamBoweniteTeamworkProject\Test\bin\Debug\ru\System.Windows.Interactivity.resources.dll
 D:\SVNProjects\TeamBoweniteTeamworkProject\Test\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 D:\SVNProjects\TeamBoweniteTeamworkProject\Test\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
-D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
 D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\AddNewClient.baml
 D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\AddNewItem.baml
 D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\AddNewPurchaseItem.baml
@@ -73,3 +72,4 @@ D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\Test.Properties.Resour
 D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\Test.csproj.GenerateResource.Cache
 D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\Test.exe
 D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\Test.pdb
+D:\SVNProjects\TeamBoweniteTeamworkProject\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
