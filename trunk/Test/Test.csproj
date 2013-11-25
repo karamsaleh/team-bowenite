@@ -98,6 +98,7 @@
     <Compile Include="Item.cs" />
     <Compile Include="Operation.cs" />
     <Compile Include="Provider.cs" />
+    <Compile Include="Purchase.cs" />
     <Compile Include="PurchaseItemChoice.xaml.cs">
       <DependentUpon>PurchaseItemChoice.xaml</DependentUpon>
     </Compile>

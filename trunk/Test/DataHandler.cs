@@ -42,9 +42,34 @@
             return result;
         }
 
-        public void SaveGoods(List<Goods> items)
+        public void SaveGoods(IEnumerable<Goods> items)
         {
-            using (StreamWriter writer = new StreamWriter("../../data/Goods.txt", false))
+            this.SaveData(items, "../../data/Goods.txt", false);
+        }
+
+        public void SaveClients(IEnumerable<Client> clients)
+        {
+            this.SaveData(clients, "../../data/Clients.txt", false);
+        }
+
+        public void SaveSales(IEnumerable<Sale> sales)
+        {
+            this.SaveData(sales, "../../data/Sales.txt", false);
+        }
+
+        public void SavePurchases(IEnumerable<Purchase> purchases)
+        {
+            this.SaveData(purchases, "../../data/Purchases.txt", false);
+        }
+
+        public void SaveProviders(IEnumerable<Provider> providers)
+        {
+            this.SaveData(providers, "../../data/Providers.txt", false);
+        }
+
+        private void SaveData(IEnumerable<object> items, string destination, bool append)
+        {
+            using (StreamWriter writer = new StreamWriter(destination, append))
             {
                 foreach (var item in items)
                 {

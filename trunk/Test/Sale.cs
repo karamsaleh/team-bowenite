@@ -16,7 +16,7 @@
             currentSaleServicesList = new List<Service>();
         }
 
-        public void AddItemToSalesList(Item item)
+        public void AddItemToSaleList(Item item)
         {
             if (item is Goods)
             {
