@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class FinancialOperation : Operation
+    public abstract class FinancialOperation : Operation
     {
         public new const string Category = "financialOperation";
 

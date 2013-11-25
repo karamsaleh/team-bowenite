@@ -1,5 +1,5 @@
-D:\SVNProjects\TeamBoweniteTeamworkProject\Test\bin\Debug\img.jpg
 D:\SVNProjects\TeamBoweniteTeamworkProject\Test\bin\Debug\Test.exe.config
+D:\SVNProjects\TeamBoweniteTeamworkProject\Test\bin\Debug\img.jpg
 D:\SVNProjects\TeamBoweniteTeamworkProject\Test\bin\Debug\Test.exe
 D:\SVNProjects\TeamBoweniteTeamworkProject\Test\bin\Debug\Test.pdb
 D:\SVNProjects\TeamBoweniteTeamworkProject\Test\bin\Debug\Microsoft.Expression.Effects.dll

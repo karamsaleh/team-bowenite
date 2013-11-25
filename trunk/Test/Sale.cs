@@ -7,13 +7,13 @@
     {
         public new const string Category = "sale";
 
-        private readonly SortedSet<Goods> currentSaleGoodsList;
-        private readonly SortedSet<Service> currentSaleServicesList;
+        private readonly List<Goods> currentSaleGoodsList;
+        private readonly List<Service> currentSaleServicesList;
 
         public Sale(DateTime dateAndTime, int id) : base(dateAndTime, id)
         {
-            currentSaleGoodsList = new SortedSet<Goods>();
-            currentSaleServicesList = new SortedSet<Service>();
+            currentSaleGoodsList = new List<Goods>();
+            currentSaleServicesList = new List<Service>();
         }
 
         public void AddItemToSalesList(Item item)
