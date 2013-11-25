@@ -85,7 +85,7 @@
 
             foreach (var property in this.GetType().GetProperties())
             {
-                partnerInfo.AppendFormat("{0}: {1} ", property.Name, property.GetValue(this));
+                partnerInfo.AppendFormat("{0};", property.GetValue(this));
             }
 
             return partnerInfo.ToString();
