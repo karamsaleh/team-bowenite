@@ -118,7 +118,6 @@
     <Compile Include="ShowSells.xaml.cs">
       <DependentUpon>ShowSells.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Stock.cs" />
     <Compile Include="Treasury.cs" />
     <Page Include="AddNewClient.xaml">
       <SubType>Designer</SubType>

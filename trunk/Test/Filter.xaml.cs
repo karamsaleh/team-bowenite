@@ -1,20 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-namespace Test
+﻿namespace Test
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Windows;
+    using System.Windows.Controls;
+    using System.Windows.Data;
+    using System.Windows.Documents;
+    using System.Windows.Input;
+    using System.Windows.Media;
+    using System.Windows.Media.Imaging;
+    using System.Windows.Navigation;
+    using System.Windows.Shapes;
+
     /// <summary>
     /// Interaction logic for Filter.xaml
     /// </summary>
@@ -34,12 +34,12 @@ namespace Test
             this.endDate.Text = DateTime.Now.ToShortDateString();
         }
 
-        private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void OnListViewSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
 
-        private void endDate_CalendarClosed(object sender, RoutedEventArgs e)
+        private void OnCalendarClosed(object sender, RoutedEventArgs e)
         {
             DateTime startDate = DateTime.Parse(this.startDate.Text);
             DateTime endDate = DateTime.Parse(this.endDate.Text);
@@ -50,7 +50,7 @@ namespace Test
             }
         }
 
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        private void OnCheckBoxChecked(object sender, RoutedEventArgs e)
         {
 
         }

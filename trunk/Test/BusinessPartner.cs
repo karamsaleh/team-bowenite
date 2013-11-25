@@ -5,7 +5,8 @@
 
     public abstract class BusinessPartner
     {
-        protected BusinessPartner(int id, string name, string city, string address, string owner, string phoneNumber, string email, string vatRegNumber = null)
+        protected BusinessPartner(int id, string name, string city, string address, string owner, string phoneNumber, string email,
+            string vatRegNumber = null)
         {
             this.ID = id;
             this.Name = name;

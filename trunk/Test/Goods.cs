@@ -13,16 +13,6 @@
         public string Measurement { get; set; }
         public decimal Quantity { get; set; }
 
-        public override void Sell()
-        {
-            Stock.RemoveGoods(this);
-        }
-
-        public override void Buy()
-        {
-            Stock.AddGoods(this);
-        }
-
         public override string ToString()
         {
             return string.Format("{0};{1};{2};{3};{4};{5};{6};{7}",

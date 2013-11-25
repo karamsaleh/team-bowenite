@@ -11,7 +11,7 @@
     		ScrollViewer.VerticalScrollBarVisibility="Visible"
     		ScrollViewer.HorizontalScrollBarVisibility="Visible" 
     		VerticalAlignment="Top" 
-    		Height="315" SelectionChanged="listView_SelectionChanged">
+    		Height="315" SelectionChanged="OnListViewSelectionChanged">
 
             <ListView.View>
                 <GridView>
@@ -26,8 +26,8 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <DatePicker x:Name="startDate" HorizontalAlignment="Left" Margin="108,448,0,0" VerticalAlignment="Top" Width="146" DisplayDate="2013-11-24" CalendarClosed="endDate_CalendarClosed" />
-        <DatePicker x:Name="endDate"  HorizontalAlignment="Left" Margin="108,492,0,0" VerticalAlignment="Top" Width="146" DisplayDate="2013-11-24" CalendarClosed="endDate_CalendarClosed"/>
+        <DatePicker x:Name="startDate" HorizontalAlignment="Left" Margin="108,448,0,0" VerticalAlignment="Top" Width="146" DisplayDate="2013-11-24" CalendarClosed="OnCalendarClosed" />
+        <DatePicker x:Name="endDate"  HorizontalAlignment="Left" Margin="108,492,0,0" VerticalAlignment="Top" Width="146" DisplayDate="2013-11-24" CalendarClosed="OnCalendarClosed"/>
         <Button Content="Filter" HorizontalAlignment="Left" Margin="312,468,0,0" VerticalAlignment="Top" Width="74" Height="24"/>
         <Label Content="Start Date" HorizontalAlignment="Left" Margin="25,446,0,0" VerticalAlignment="Top" Height="24" Width="69"/>
         <Label Content="End Date" HorizontalAlignment="Left" Margin="25,488,0,0" VerticalAlignment="Top" Height="24" Width="69"/>
