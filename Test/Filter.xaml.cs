@@ -23,10 +23,10 @@
         public Filter()
         {
             InitializeComponent();
-            this.setDefaultDatePickerDates();
+            this.SetDefaultDatePickerDates();
         }
 
-        private void setDefaultDatePickerDates()
+        private void SetDefaultDatePickerDates()
         {
             DateTime beforeSevenDays = new DateTime();
             beforeSevenDays = DateTime.Today.AddDays(-7);
@@ -46,7 +46,7 @@
             if ((endDate - startDate).TotalDays < 0)
             {
                 MessageBox.Show("The Start Date can not be after the End Date");
-                this.setDefaultDatePickerDates();
+                this.SetDefaultDatePickerDates();
             }
         }
 
