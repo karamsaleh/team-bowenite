@@ -8,12 +8,12 @@
         public new const string Category = "purchase";
 
         private readonly List<Goods> currentPurchaseGoodsList;
-        private readonly List<Service> currentPurchaseServiciesList;
+        private readonly List<Service> currentPurchaseServicesList;
 
         public Purchase(DateTime dateAndTime, int id) : base(dateAndTime, id)
         {
             currentPurchaseGoodsList = new List<Goods>();
-            currentPurchaseServiciesList = new List<Service>();
+            currentPurchaseServicesList = new List<Service>();
         }
 
         public void AddItemToPurchaseList(Item item)
@@ -24,7 +24,7 @@
             }
             else if (item is Service)
             {
-                currentPurchaseServiciesList.Add(item as Service);
+                currentPurchaseServicesList.Add(item as Service);
             }
         }
     }
