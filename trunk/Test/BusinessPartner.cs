@@ -5,11 +5,22 @@
 
     /// <summary>
     /// The base class of all warehouse business partners. 
-    /// All types the warehouse has business relationship with inherit this class
+    /// All types the warehouse has business relationship with inherit this class.
     /// </summary>
     [Serializable]
     public abstract class BusinessPartner
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BusinessPartner" /> class.
+        /// </summary>
+        /// <param name="id">The id.</param>
+        /// <param name="name">The name.</param>
+        /// <param name="city">The city.</param>
+        /// <param name="address">The address.</param>
+        /// <param name="owner">The owner.</param>
+        /// <param name="phoneNumber">The phone number.</param>
+        /// <param name="email">The email.</param>
+        /// <param name="vatRegNumber">The vat reg number.</param>
         protected BusinessPartner(int id, string name, string city, string address, string owner, string phoneNumber, string email,
             string vatRegNumber = null)
         {
@@ -39,6 +50,10 @@
 
         public string Email { get; protected set; }
 
+        /// <summary>
+        /// Serves as a hash function for a particular type.
+        /// </summary>
+        /// <returns>A hash code for the current <see cref="T:System.Object" />.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -56,6 +71,11 @@
             }
         }
 
+        /// <summary>
+        /// Equalses the specified value.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns></returns>
         public bool Equals(BusinessPartner value)
         {
             if (ReferenceEquals(null, value))
@@ -76,6 +96,15 @@
                    Equals(this.Email, value.Email);
         }
 
+        /// <summary>
+        /// Determines whether the specified <see cref="T:System.Object" /> is equal
+        /// to the current <see cref="T:System.Object" />.
+        /// </summary>
+        /// <param name="obj">The object to compare with the current object.</param>
+        /// <returns>
+        /// true if the specified object  is equal to the current object; otherwise,
+        /// false.
+        /// </returns>
         public override bool Equals(object obj)
         {
             BusinessPartner temp = obj as BusinessPartner;
@@ -84,6 +113,10 @@
             return this.Equals(temp);
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        /// <returns>A string that represents the current object.</returns>
         public override string ToString()
         {
             var partnerInfo = new StringBuilder();

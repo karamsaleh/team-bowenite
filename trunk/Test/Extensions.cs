@@ -5,6 +5,9 @@
     using System.Runtime.Serialization;
     using System.Runtime.Serialization.Formatters.Binary;
 
+    /// <summary>
+    /// Holds extension methods used in the warehouse program logic.
+    /// </summary>
     public static class Extensions
     {
         /// <summary>
