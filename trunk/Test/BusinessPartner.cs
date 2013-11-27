@@ -3,6 +3,10 @@
     using System;
     using System.Text;
 
+    /// <summary>
+    /// The base class of all warehouse business partners. 
+    /// All types the warehouse has business relationship with inherit this class
+    /// </summary>
     [Serializable]
     public abstract class BusinessPartner
     {
