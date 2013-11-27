@@ -3,6 +3,9 @@
     using System;
     using System.Text;
 
+    /// <summary>
+    /// The base class of all warehouse operation types. All types of operations conducted in the warehouse inherit this class.
+    /// </summary>
     [Serializable]
     public abstract class Operation
     {
