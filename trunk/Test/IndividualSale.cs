@@ -1,7 +1,8 @@
 ﻿namespace Test
 {
     using System;
-
+    
+    [Serializable]
     public class IndividualSale : Sale
     {
         public new const string Category = "individualSale";

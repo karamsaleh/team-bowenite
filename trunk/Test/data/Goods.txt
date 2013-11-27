@@ -1,9 +1,5 @@
-﻿1;Beverages;Cola;3;0;2;liter;3
-1;;5;5;6;4;kilograms;0
-1;;2;2;3;1;liters;0
-2;;1;1;1;1;kilograms;0
-3;;1;1;1;1;kilograms;0
-4;;Sell Article;1;1;1;kilograms;0
-6;;Fanta;6;0;4;kilograms;0
-9;;Sprite;3;0;2;liters;0
-11;;Pepsi;4;0;3;liters;0
+﻿liters;0;1;new;Sprite;2;0;1;2;2,4;
+liters;0;2;new;Fanta;2;0;1;2;2,4;
+liters;0;3;new;Cola;2;1;1;1,98;2,376;
+liters;0;4;new;Jameson;25;2;20;24,50;29,400;
+liters;0;5;new;JackDaniels;50;2;40;49,00;58,800;

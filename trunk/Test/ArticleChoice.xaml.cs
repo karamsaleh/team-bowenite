@@ -63,7 +63,7 @@
 
         private void ArticlesGrid_Loaded(object sender, RoutedEventArgs e)
         {
-            List<Goods> items = DataHandler.Instance.LoadGoods();
+            List<Goods> items = DataHandler.Instance.LoadGoods().ToList<Goods>();
             dgArticles.ItemsSource = items;
         }
 

@@ -3,6 +3,7 @@
     using System;
     using System.Text;
 
+    [Serializable]
     public abstract class Operation
     {
         public const string Category = "operation";
