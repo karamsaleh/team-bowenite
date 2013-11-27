@@ -6,7 +6,7 @@
     {
         public new const string Category = "financialOperation";
 
-        public FinancialOperation(DateTime dateAndTime, int id) : base(dateAndTime, id)
+        protected FinancialOperation(DateTime dateAndTime, int id) : base(dateAndTime, id)
         {
         }
     }

@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
 
+    [Serializable]
     public class Purchase : FinancialOperation
     {
         public new const string Category = "purchase";

@@ -2,6 +2,7 @@
 {
     using System;
 
+    [Serializable]
     public class CompanySale : Sale
     {
         public new const string Category = "companySale";

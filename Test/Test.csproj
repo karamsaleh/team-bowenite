@@ -86,6 +86,7 @@
     </Compile>
     <Compile Include="CompanySale.cs" />
     <Compile Include="DataHandler.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="Filter.xaml.cs">
       <DependentUpon>Filter.xaml</DependentUpon>
     </Compile>

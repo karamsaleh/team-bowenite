@@ -47,11 +47,11 @@ namespace Test
             {
                 ComboBoxItem cbItem = (ComboBoxItem)cbMeasurement.SelectedItem;
 
-                Goods item = new Goods(int.Parse(tbID.Text), string.Empty, tbName.Text, 
-                    decimal.Parse(tbSellPrice.Text), decimal.Parse(tbDiscount.Text),decimal.Parse(tbValue.Text),
-                    cbItem.Content.ToString(), 0);
+                Goods item = new Goods(int.Parse(tbID.Text.Trim()), string.Empty, tbName.Text.Trim(), 
+                    decimal.Parse(tbSellPrice.Text.Trim()), decimal.Parse(tbDiscount.Text.Trim()),decimal.Parse(tbValue.Text.Trim()),
+                    cbItem.Content.ToString().Trim(), 0);
 
-                List<Goods> goods = DataHandler.Instance.LoadGoods();
+                List<Goods> goods = DataHandler.Instance.LoadGoods().ToList<Goods>();
                 goods.Add(item);
                 DataHandler.Instance.SaveGoods(goods);
                 Window artChoice = new ArticleChoice();

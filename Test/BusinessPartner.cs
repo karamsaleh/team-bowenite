@@ -3,6 +3,7 @@
     using System;
     using System.Text;
 
+    [Serializable]
     public abstract class BusinessPartner
     {
         protected BusinessPartner(int id, string name, string city, string address, string owner, string phoneNumber, string email,

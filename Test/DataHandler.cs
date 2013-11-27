@@ -8,6 +8,12 @@
 
     public class DataHandler
     {
+        private const string PathToGoodsFile = "../../data/Goods.txt";
+        private const string PathToClientsFile = "../../data/Clients.txt";
+        private const string PathToProvidersFile = "../../data/Providers.txt";
+        private const string PathToSalesFile = "../../data/Sales.txt";
+        private const string PathToPurchasesFile = "../../data/Purchases.txt";
+
         private static DataHandler instance;
 
         public static DataHandler Instance
@@ -22,135 +28,98 @@
             }
         }
 
-        public List<Goods> LoadGoods()
+        private IEnumerable<object> LoadData(string source, object obj)
         {
-            var goodsList = new List<Goods>();
-            foreach (var line in this.LoadData("../../data/Goods.txt"))
+            var data = new List<object>();
+            var properties = obj.GetType().GetProperties();
+
+            using (var reader = new StreamReader(source, Encoding.UTF8))
             {
-                string[] p = line.Split(';');
-                goodsList.Add(new Goods(
-                    int.Parse(p[0]), p[1], p[2], decimal.Parse(p[3]), decimal.Parse(p[4]), decimal.Parse(p[5]),
-                    p[6], decimal.Parse(p[7])));
+                var line = reader.ReadLine();
+
+                while (!String.IsNullOrEmpty(line))
+                {
+                    var values = line.Split(';');
+
+                    // Sets all properties of obj to the correspoding values extracted from source
+                    // Values are sequentially being parsed to the corresponding type of the property
+                    for (int i = 0; i < properties.Length; i++)
+                    {
+                        var currentProperty = properties[i];
+                        if (currentProperty.CanWrite)
+                        {
+                            properties[i].SetValue(obj, Convert.ChangeType(values[i], properties[i].PropertyType));                            
+                        }
+                    }
+
+                    // Adds a deep copy of obj to data list
+                    data.Add(obj.Clone());
+
+                    line = reader.ReadLine();
+                }
             }
-            return goodsList;
+
+            return data as IEnumerable<object>;
         }
 
-        public List<Client> LoadClients()
+        public IEnumerable<Goods> LoadGoods()
         {
-            var clients = new List<Client>();
-            foreach (var line in this.LoadData("../../data/Clients.txt"))
-            {
-                string[] p = line.Split(';');
-                clients.Add(new Client(int.Parse(p[0]), p[1], p[2], p[3], p[4], p[5], p[6], p[7]));
-            }
-            return clients;
+            var goods = new Goods(0, null, null, 0m, 0m, 0m, null, 0m);
+            return this.LoadData(PathToGoodsFile, goods).Cast<Goods>();
         }
 
-        public List<Provider> LoadProviders()
+        public IEnumerable<Client> LoadClients()
         {
-            var providers = new List<Provider>();
-            foreach (var line in this.LoadData("../../data/Providers.txt"))
-            {
-                string[] p = line.Split(';');
-                providers.Add(new Provider(int.Parse(p[0]), p[1], p[2], p[3], p[4], p[5], p[6], p[7]));
-            }
-            return providers;
+            var client = new Client(0, null, null, null, null, null, null, null);
+            return this.LoadData(PathToClientsFile, client).Cast<Client>();
         }
 
-        public List<Sale> LoadSales()
+        public IEnumerable<Provider> LoadProviders()
         {
-            var sales = new List<Sale>();
-            foreach (var line in this.LoadData("../../data/Sales.txt"))
-            {
-                string[] p = line.Split(';');
-                sales.Add(new Sale(DateTime.Parse(p[0]), int.Parse(p[2])));
-            }
-            return sales;
+            var provider = new Provider(0, null, null, null, null, null, null, null);
+            return this.LoadData(PathToProvidersFile, provider).Cast<Provider>();
         }
 
-        public List<Purchase> LoadPurchases()
+        public IEnumerable<Sale> LoadSales()
         {
-            var purchases = new List<Purchase>();
-            foreach (var line in this.LoadData("../../data/Purchases.txt"))
-            {
-                string[] p = line.Split(';');
-                purchases.Add(new Purchase(DateTime.Parse(p[0]), int.Parse(p[1])));
-            }
-            return purchases;
+            var sale = new Sale(default(DateTime), 0);
+            return this.LoadData(PathToSalesFile, sale).Cast<Sale>();
+        }
+
+        public IEnumerable<Purchase> LoadPurchases()
+        {
+            var purchase = new Purchase(default(DateTime), 0);
+            return this.LoadData(PathToPurchasesFile, purchase).Cast<Purchase>();
         }
 
         public void SaveGoods(IEnumerable<Goods> items)
         {
-            this.SaveData(items, "../../data/Goods.txt", false);
+            this.SaveData(items, PathToGoodsFile);
         }
 
         public void SaveClients(IEnumerable<Client> clients)
         {
-            this.SaveData(clients, "../../data/Clients.txt", false);
+            this.SaveData(clients, PathToClientsFile);
         }
-        
+
         public void SaveProviders(IEnumerable<Provider> providers)
         {
-            this.SaveData(providers, "../../data/Providers.txt", false);
+            this.SaveData(providers, PathToProvidersFile);
         }
 
         public void SaveSales(IEnumerable<Sale> sales)
         {
-            this.SaveData(sales, "../../data/Sales.txt", false);
+            this.SaveData(sales, PathToSalesFile);
         }
 
         public void SavePurchases(IEnumerable<Purchase> purchases)
         {
-            this.SaveData(purchases, "../../data/Purchases.txt", false);
+            this.SaveData(purchases, PathToPurchasesFile);
         }
 
-        private List<string> LoadData(string source)
+        private void SaveData(IEnumerable<object> items, string destination)
         {
-            var lines = new List<string>();
-            using (var reader = new StreamReader(source))
-            {
-                while (true)
-                {
-                    string line = reader.ReadLine();
-                    if (line == null)
-                    {
-                        break;
-                    }
-                    lines.Add(line);
-                }
-            }
-            return lines;
-        }
-
-        //private List<object> LoadData(string source, object obj)
-        //{
-        //    List<object> result = new List<object>();
-        //    using (StreamReader reader = new StreamReader(source, Encoding.UTF8))
-        //    {
-        //        while (true)
-        //        {
-        //            string line = reader.ReadLine();
-        //            if (line == null)
-        //            {
-        //                break;
-        //            }
-        //            string[] propertyValues = line.Split(';');
-        //            int i = 0;
-
-        //            foreach (var property in obj.GetType().GetProperties())
-        //            {
-        //                property.SetValue(obj, Convert.ChangeType(propertyValues[i++], property.PropertyType));
-        //            }
-        //            result.Add(obj);
-        //        }
-        //    }
-
-        //    return result;
-        //}
-
-        private void SaveData(IEnumerable<object> items, string destination, bool append)
-        {
-            using (StreamWriter writer = new StreamWriter(destination, append, Encoding.UTF8))
+            using (var writer = new StreamWriter(destination, false, Encoding.UTF8))
             {
                 foreach (var item in items)
                 {
