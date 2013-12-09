@@ -78,7 +78,6 @@
                     {
                         var currentProperty = properties[i];
 
-
                         if (currentProperty.CanWrite)
                         {
                             var currentPropertyType = currentProperty.PropertyType;

@@ -25,7 +25,7 @@
         public ArticleChoice()
         {
             InitializeComponent();
-            
+
         }
 
         private void OnLostWindowFocus(object sender, RoutedEventArgs e)
@@ -53,7 +53,7 @@
             Window addNewArticleWindow = new AddNewItem();
             addNewArticleWindow.Show();
             //this.Visibility = Visibility.Collapsed;
-            
+
         }
 
         private void OnCancelButtonClick(object sender, RoutedEventArgs e)
@@ -69,10 +69,22 @@
 
         private void AddItemForSell(object sender, RoutedEventArgs e)
         {
-            Goods selectedGoods = this.dgArticles.SelectedItem as Goods;
-            forSell.Add(selectedGoods);
-            this.Visibility = Visibility.Collapsed;
-            this.ArticleDetails.Visibility = Visibility.Collapsed;
+            try
+            {
+                Goods selectedGoods = this.dgArticles.SelectedItem as Goods;
+                if (selectedGoods.Quantity < int.Parse(tbQuantity.Text))
+                {
+                    throw new ItemNotOnStockException("There is not enough quantity in stock");
+                }
+
+                forSell.Add(selectedGoods);
+                this.Visibility = Visibility.Collapsed;
+                this.ArticleDetails.Visibility = Visibility.Collapsed;
+            }
+            catch (ItemNotOnStockException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         public List<Goods> GoodsForSell
