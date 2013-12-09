@@ -61,12 +61,26 @@
 
         private void dgCurrSell_DataBind(object sender, RoutedEventArgs e)
         {
-            List<Goods> goods = dgCurrentSell.ItemsSource as List<Goods>;
-            Goods item = window.dgArticles.SelectedItem as Goods;
-            item.Quantity = int.Parse(window.tbQuantity.Text);
-            goods.Add(item);
-            dgCurrentSell.ItemsSource = goods;
-            dgCurrentSell.Items.Refresh();
+            try
+            {
+                List<Goods> goods = dgCurrentSell.ItemsSource as List<Goods>;
+                Goods item = window.dgArticles.SelectedItem as Goods;
+
+                if (item.Quantity < int.Parse(window.tbQuantity.Text))
+                {
+                    throw new ItemNotOnStockException("There is not enough quantity in stock");
+                }
+
+                item.Quantity = int.Parse(window.tbQuantity.Text);
+                goods.Add(item);
+                dgCurrentSell.ItemsSource = goods;
+                dgCurrentSell.Items.Refresh();
+
+            }
+            catch (ItemNotOnStockException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void OnArticleButtonClick(object sender, RoutedEventArgs e)

@@ -176,8 +176,6 @@
 
             foreach (var property in this.GetType().GetProperties())
             {
-                // temporary solution, have to add user input categories choice
-                this.GetType().GetProperty("Category").SetValue(this, "new");
                 itemInfo.AppendFormat("{0};", property.GetValue(this));
             }
 
