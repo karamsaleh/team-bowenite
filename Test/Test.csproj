@@ -95,8 +95,10 @@
     <Compile Include="IndividualSale.cs" />
     <Compile Include="Invoice.cs" />
     <Compile Include="IPurchasable.cs" />
+    <Compile Include="IRentable.cs" />
     <Compile Include="ISellable.cs" />
     <Compile Include="Item.cs" />
+    <Compile Include="ItemNotOnStockException.cs" />
     <Compile Include="Operation.cs" />
     <Compile Include="Provider.cs" />
     <Compile Include="Purchase.cs" />
@@ -111,6 +113,7 @@
       <DependentUpon>SellerChoice.xaml</DependentUpon>
     </Compile>
     <Compile Include="Service.cs" />
+    <Compile Include="Services.cs" />
     <Compile Include="ShowInvoices.xaml.cs">
       <DependentUpon>ShowInvoices.xaml</DependentUpon>
     </Compile>

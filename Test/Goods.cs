@@ -6,7 +6,7 @@
     /// Defines a stock item in the warehouse.
     /// </summary>
     [Serializable]
-    public class Goods : Item
+    public class Goods : Item, IRentable
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Goods" /> class.
@@ -39,5 +39,14 @@
         /// <value>The quantity.</value>
         /// <remarks>The quantity is evaluated by the measurement of the object.</remarks>
         public decimal Quantity { get; set; }
+
+
+        /// <summary>
+        /// Rents this instance.
+        /// </summary>
+        public void Rent()
+        {
+           // throw new NotImplementedException();
+        }
     }
 }
