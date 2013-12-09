@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Test.AddNewClient" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>AddNewClient.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.AddNewItem" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAgAAAAAAIAA=</HashCode>
+      <FileName>AddNewItem.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.AddNewPurchaseItem" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAgAAAAAAIAA=</HashCode>
+      <FileName>AddNewPurchaseItem.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.App" Collapsed="true">
+    <Position X="12" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.ArticleChoice" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAACAAAgAAAQEAAAAAAQAAAAAAAAAAAQIAAIAA=</HashCode>
+      <FileName>ArticleChoice.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.BusinessPartner" Collapsed="true">
+    <Position X="6" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACAAgAAMgAAAQAQAAAAEAIACAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessPartner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.Buy" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAIAAAAAAAAAgAAAAACAAIAAAAAAAAAAE=</HashCode>
+      <FileName>Buy.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.Client" Collapsed="true">
+    <Position X="5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.ClientChoice" Collapsed="true">
+    <Position X="12.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAACAAAAAAAAEAAAAAAQAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>ClientChoice.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.CompanySale" Collapsed="true">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQA=</HashCode>
+      <FileName>CompanySale.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.DataHandler" Collapsed="true">
+    <Position X="5.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gACAgIAIBCAQAACAAKAAYAAQAABAAAgAQAAAAgABAAA=</HashCode>
+      <FileName>DataHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.Extensions" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Extensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.Filter" Collapsed="true">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIAAAAAAAAAAAAAAgAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Filter.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.FinancialOperation" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>FinancialOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.Goods" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <InheritanceLine Type="Test.Item" FixedToPoint="true">
+      <Path>
+        <Point X="2.5" Y="7.062" />
+        <Point X="2.5" Y="7.375" />
+        <Point X="1.312" Y="7.375" />
+        <Point X="1.312" Y="7.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAQgAAAAAA=</HashCode>
+      <FileName>Goods.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Test.IndividualSale" Collapsed="true">
+    <Position X="3" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>IndividualSale.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.Invoice" Collapsed="true">
+    <Position X="7.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAEAAAAAAAAgAAAAAAAAAAAACAAAAAAAAAAAg=</HashCode>
+      <FileName>Invoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.Item" Collapsed="true">
+    <Position X="1.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAEAAAABAhAAEwAAAAAQAAAAAAIAAAgAgAAAACAA=</HashCode>
+      <FileName>Item.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Test.ItemNotOnStockException" Collapsed="true">
+    <Position X="5.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ItemNotOnStockException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.MainWindow" Collapsed="true">
+    <Position X="12" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAIAAAAAgAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.Operation" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAgAAEAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Operation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.Provider" Collapsed="true">
+    <Position X="7" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Provider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.Purchase" Collapsed="true">
+    <Position X="0.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAIAAIAAAAACAA=</HashCode>
+      <FileName>Purchase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.PurchaseItemChoice" Collapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAACAAAAAAAAEAAAAAAQAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>PurchaseItemChoice.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.Sale" Collapsed="true">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAABAAAAAAACAAAAAAACAA=</HashCode>
+      <FileName>Sale.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.Sell" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAIAACAAAAAAgAAAAACAIIAAAABgIAAAA=</HashCode>
+      <FileName>Sell.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.SellerChoice" Collapsed="true">
+    <Position X="12.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>SellerChoice.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.Service" Collapsed="true">
+    <Position X="2.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Service.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.ShowInvoices" Collapsed="true">
+    <Position X="14.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ShowInvoices.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.ShowPurchases" Collapsed="true">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ShowPurchases.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.ShowSells" Collapsed="true">
+    <Position X="14.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ShowSells.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.Properties.Resources" Collapsed="true">
+    <Position X="13.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.Properties.Settings" Collapsed="true">
+    <Position X="13.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Test.Treasury" Collapsed="true">
+    <Position X="7.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Treasury.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="Test.IPurchasable" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IPurchasable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Test.IRentable" Collapsed="true">
+    <Position X="7.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IRentable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Test.ISellable" Collapsed="true">
+    <Position X="7.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ISellable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Test.Services" Collapsed="true">
+    <Position X="7.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
