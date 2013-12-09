@@ -4,3 +4,4 @@ liters;0;3;new;Cola;2;1;1;1,98;2,376;
 liters;0;4;new;Jameson;25;2;20;24,50;29,400;
 liters;0;5;new;JackDaniels;50;2;40;49,00;58,800;
 pieces;0;6;new;Marlboro;5;0;4;5;6,0;
+liters;0;7;new;RedBull;5;1;4;4,95;5,940;

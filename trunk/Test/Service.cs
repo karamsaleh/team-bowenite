@@ -5,6 +5,7 @@
     /// </summary>
     public class Service : Item
     {
+        public Services TypesOfServices { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Service" /> class.
         /// </summary>
@@ -14,9 +15,11 @@
         /// <param name="salesPrice">The sales price.</param>
         /// <param name="discount">The discount.</param>
         /// <param name="value">The value.</param>
-        public Service(int id, string category, string name, decimal salesPrice, decimal discount, decimal value) 
+        public Service(int id, string category, string name, decimal salesPrice,
+            decimal discount, decimal value, Services typesOfServices = Services.StockSafeKeeping) 
             : base(id, category, name, salesPrice, discount, value)
         {
+            this.TypesOfServices = typesOfServices;
         }
     }
 }

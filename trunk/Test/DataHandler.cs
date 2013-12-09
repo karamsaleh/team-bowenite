@@ -7,7 +7,7 @@
     using System.Text;
 
     /// <summary>
-    /// Handles warehouse data operations.
+    /// Handles warehouse data operations. Implementation of the Singleton design pattern.
     /// </summary>
     public class DataHandler
     {
