@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.IO;
     using System.Linq;
     using System.Text;
@@ -76,9 +77,24 @@
                     for (int i = 0; i < properties.Length; i++)
                     {
                         var currentProperty = properties[i];
+
+
                         if (currentProperty.CanWrite)
                         {
-                            properties[i].SetValue(obj, Convert.ChangeType(values[i], properties[i].PropertyType));                            
+                            var currentPropertyType = currentProperty.PropertyType;
+                            // Nullable properties have to be treated differently, since we 
+                            // use their underlying property to set the value in the object
+                            if (currentPropertyType.IsGenericType && currentPropertyType.GetGenericTypeDefinition().Equals(typeof(Nullable<>)))
+                            {
+                                if (values[i] == null)
+                                {
+                                    currentProperty.SetValue(obj, null);
+                                }
+
+                                // Get the underlying type property instead of the nullable generic
+                                currentPropertyType = new NullableConverter(properties[i].PropertyType).UnderlyingType;
+                            }
+                            properties[i].SetValue(obj, Convert.ChangeType(values[i], currentPropertyType));
                         }
                     }
 
