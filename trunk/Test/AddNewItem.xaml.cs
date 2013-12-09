@@ -47,8 +47,8 @@ namespace Test
             {
                 ComboBoxItem cbItem = (ComboBoxItem)cbMeasurement.SelectedItem;
 
-                Goods item = new Goods(int.Parse(tbID.Text.Trim()), string.Empty, tbName.Text.Trim(), 
-                    decimal.Parse(tbSellPrice.Text.Trim()), decimal.Parse(tbDiscount.Text.Trim()),decimal.Parse(tbValue.Text.Trim()),
+                Goods item = new Goods(int.Parse(tbID.Text.Trim()), tbCategory.Text, tbName.Text.Trim(),
+                    decimal.Parse(tbSellPrice.Text.Trim()), decimal.Parse(tbDiscount.Text.Trim()), decimal.Parse(tbValue.Text.Trim()),
                     cbItem.Content.ToString().Trim(), 0);
 
                 List<Goods> goods = DataHandler.Instance.LoadGoods().ToList<Goods>();

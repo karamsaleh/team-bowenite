@@ -69,22 +69,11 @@
 
         private void AddItemForSell(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                Goods selectedGoods = this.dgArticles.SelectedItem as Goods;
-                if (selectedGoods.Quantity < int.Parse(tbQuantity.Text))
-                {
-                    throw new ItemNotOnStockException("There is not enough quantity in stock");
-                }
+            Goods selectedGoods = this.dgArticles.SelectedItem as Goods;
 
-                forSell.Add(selectedGoods);
-                this.Visibility = Visibility.Collapsed;
-                this.ArticleDetails.Visibility = Visibility.Collapsed;
-            }
-            catch (ItemNotOnStockException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            forSell.Add(selectedGoods);
+            this.Visibility = Visibility.Collapsed;
+            this.ArticleDetails.Visibility = Visibility.Collapsed;
         }
 
         public List<Goods> GoodsForSell
