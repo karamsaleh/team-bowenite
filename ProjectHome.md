@@ -1,0 +1,1 @@
+This project is the result of a teamwork assignment for Telerik Academy students studying Object-Oriented Programming.
